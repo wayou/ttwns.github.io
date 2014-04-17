@@ -8,7 +8,7 @@ So they say.
 
 Three weeks ago [The Traveling Twins](http://ttwns.tw) took part in a contest held by a well-known multinational conglomerate company who makes smartphones. It was quite exhausting because most of the time we just sit there and wait, but also rewarding in terms of a two-week work for a one-month old company(we won a free smartphone & tablet home!).
 
-![Presenting Gridy on Samsung Apps Contest]({{ site.url }}/assets/images/gridy_presentation.jpg)
+![Presenting Gridy on Samsung Apps Contest]({{ site.url }}/assets/images/gridy-presentation.jpg)
 
 We have to confess that we were not so serious about the contest (we suppose it's hard for a two-week work to be outstanding). But we were content with making [Gridy](http://ttwns.tw/gridy "Link to Gridy's website") possible. However, one of the judge was not so happy with it and even quote a line from *The Matrix Revolutions*, and said: "Every program has a purpose." We actually looked it up and [found](http://www.generationterrorists.com/quotes/the_matrix_revolutions.shtml) that the exact line was: "Every program that is created must have a purpose; if it does not, it is deleted." Thankfully they wasn't able to delete Gridy.
 
