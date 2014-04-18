@@ -1,3 +1,14 @@
-name: The Traveling Twins
-markdown: redcarpet
-pygments: true
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            The Traveling Twins
+tagline:          The Blog
+description:      Blog for The Traveling Twins
+url:              http://blog.ttwns.tw
+
+paginate:         1
