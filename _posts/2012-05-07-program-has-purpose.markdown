@@ -8,7 +8,7 @@ categories: Gridy 哲學
 
 三個禮拜前旅人兩兄弟參加了一個做手機的知名跨國企業所辦的比賽，滿累的，因為大多數時間我們都閒閒坐著等，但對剛成立一個月的公司只做兩個禮拜的案子來說也很值得，因為我們帶了免費的手機跟平板回家！
 
-![在三星 APP 比賽上簡報 Gridy]({{ site.url }}/assets/images/gridy_presentation.jpg)
+![在三星 APP 比賽上簡報 Gridy]({{ site.url }}/assets/images/gridy-presentation.jpg)
 
 老實說我們不是很在意比賽（兩個禮拜的成果實在難以見人），卻開心能有機會實現 [Gridy](http://ttwns.tw/gridy "Gridy")，不過有位評審倒不太樂見 Gridy，還引用了[*《駭客任務完結篇：最後戰役》*](http://www.generationterrorists.com/quotes/the_matrix_revolutions.shtml)裡的一句話：「每個程式都有目的。」我們查了一下，完整的句子是：「每個被創造出來的程式都要有個目的，如果沒有，就會被刪除。」（Every program that is created must have a purpose; if it does not, it is deleted），幸好他們沒能刪除 Gridy。
 
