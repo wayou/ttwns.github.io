@@ -16,3 +16,4 @@ paginate:         1
 # Assets
 sass:
   sass_dir:       _scss
+  style:          :compressed
