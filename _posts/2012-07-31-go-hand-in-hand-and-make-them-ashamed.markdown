@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Go hand in hand and make them ashamed.
 enki_id: 10
 categories: Philosophy

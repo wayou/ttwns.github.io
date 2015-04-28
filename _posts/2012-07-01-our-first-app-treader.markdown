@@ -1,5 +1,4 @@
 ---
-layout: post
 title: TReader - 旅人兄弟首隻 APP 將於數週內上市
 enki_id: 9
 categories: TReader 安卓 出版 閱讀器

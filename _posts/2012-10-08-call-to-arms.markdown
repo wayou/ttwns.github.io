@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 吶喊
 enki_id: 15
 categories: TReader 小說

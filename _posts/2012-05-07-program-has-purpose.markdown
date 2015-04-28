@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 每個程式都有目的，而我們註定要相遇。
 enki_id: 2
 categories: Gridy 哲學

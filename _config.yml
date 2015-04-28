@@ -17,3 +17,11 @@ paginate:         1
 sass:
   sass_dir:       _scss
   style:          :compressed
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"

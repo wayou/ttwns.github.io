@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 界限
 enki_id: 11
 categories: 哲學

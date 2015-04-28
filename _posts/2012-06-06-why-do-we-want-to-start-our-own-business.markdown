@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Why do we want to start our own business?
 enki_id: 4
 categories: Entrepreneurship

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: TReader - The Traveling Twins's first app will be launched within few weeks!!
 enki_id: 8
 categories: TReader Android Publishing Reader

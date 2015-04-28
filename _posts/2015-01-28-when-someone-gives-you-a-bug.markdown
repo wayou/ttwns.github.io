@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 有人跟你回報了一個 bug
 categories: programmer humor
 ---

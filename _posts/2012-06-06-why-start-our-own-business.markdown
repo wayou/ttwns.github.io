@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 為什麼我們想創業？
 enki_id: 5
 categories: 創業

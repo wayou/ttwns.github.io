@@ -1,5 +1,4 @@
 ---
-layout: post
 title: TidyTilt for iPhone 開箱文
 enki_id: 3
 categories: 小玩意兒 iPhone Thinkering

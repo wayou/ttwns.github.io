@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 部落格重新設計之一
 enki_id: 14
 categories: 設計

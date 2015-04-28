@@ -1,5 +1,4 @@
 ---
-layout: post
 title: TReader 與好讀
 enki_id: 13
 categories: TReader 出版 閱讀器

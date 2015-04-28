@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 人生就是不停地戰鬥
 enki_id: 12
 categories: TReader 哲學

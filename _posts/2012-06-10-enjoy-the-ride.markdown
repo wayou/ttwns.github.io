@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 請讓我們享受這趟旅程
 enki_id: 7
 categories: 創業 哲學

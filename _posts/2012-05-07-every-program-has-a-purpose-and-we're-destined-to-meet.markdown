@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Every program has a purpose, and we're destined to meet.
 enki_id: 1
 categories: Gridy Philosophy

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Let us enjoy the ride.
 enki_id: 6
 categories: Entrepreneurship, Philosophy
