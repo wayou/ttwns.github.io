@@ -12,3 +12,16 @@ description:      Blog for The Traveling Twins
 url:              http://blog.ttwns.tw
 
 paginate:         1
+
+# Assets
+sass:
+  sass_dir:       _scss
+  style:          :compressed
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"

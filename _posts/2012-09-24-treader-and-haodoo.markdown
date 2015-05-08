@@ -1,7 +1,7 @@
 ---
-layout: post
 title: TReader 與好讀
-enki_id: 13
+author: yesyo
+language: Chinese
 categories: TReader 出版 閱讀器
 ---
 前天收到[好讀](http://www.haodoo.net)周博士將 [TReader](http://ttwns.tw/treader) 連結放上好讀網站的通知，昨天兄弟倆將 TReader 的介紹 po 在 [Mobile01](http://www.mobile01.com)，一瞬間製造了兩個月來[從沒有過的流量](https://twitter.com/travelingtwins/statuses/249796553814994945)。流量雖然小，但兄弟倆已然十分滿足，畢竟自己的作品有人看，才有往前的動力。

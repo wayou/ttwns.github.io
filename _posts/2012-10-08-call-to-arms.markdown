@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 吶喊
-enki_id: 15
+author: aleftie
+language: Chinese
 categories: TReader 小說
 ---
 > 我在年青時候也曾經做過許多夢，後來大半忘卻了，但自己也並不以為可惜。所謂回憶者，雖說可以使人歡欣，有時也不免使人寂寞，使精神的絲縷還牽著已逝的寂寞的時光，又有什麼意味呢？而我偏苦於不能全忘卻。

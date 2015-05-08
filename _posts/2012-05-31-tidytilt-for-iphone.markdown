@@ -1,7 +1,7 @@
 ---
-layout: post
 title: TidyTilt for iPhone 開箱文
-enki_id: 3
+author: aleftie
+language: Chinese
 categories: 小玩意兒 iPhone Thinkering
 ---
 

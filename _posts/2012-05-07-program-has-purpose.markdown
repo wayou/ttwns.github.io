@@ -1,7 +1,7 @@
 ---
-layout: post
 title: 每個程式都有目的，而我們註定要相遇。
-enki_id: 2
+author: aleftie
+language: Chinese
 categories: Gridy 哲學
 ---
 他們如是說。
