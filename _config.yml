@@ -11,6 +11,8 @@ tagline:          The Blog
 description:      Blog for The Traveling Twins
 url:              http://blog.ttwns.tw
 
+google_analytics_id: UA-35010205-2
+
 paginate:         1
 
 # Assets
