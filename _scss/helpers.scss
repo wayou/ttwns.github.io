@@ -1,5 +1,10 @@
+//
+// SASS placeholders
+// =================
+
+
 // Clearfix
-// ========
+// --------
 // For modern browsers
 // 1. The space content is one way to avoid an Opera bug when the
 //    contenteditable attribute is included anywhere else in the document.
@@ -9,7 +14,6 @@
 //    `:before` to contain the top-margins of child elements.
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
-
 %clearfix {
 
  	&:before,
@@ -23,15 +27,18 @@
   	}
 }
 
-// Hide visually and from screen readers:
+//
+// CSS helper classes
+// ==================
 
+
+// Hide visually and from screen readers:
 .hidden {
     display: none !important;
 }
 
 // Hide only visually, but have it available for screen readers:
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-
 .sr-only {
     border: 0;
     clip: rect(0 0 0 0);
@@ -46,7 +53,6 @@
 // Extends the .sr-only class to allow the element
 // to be focusable when navigated to via the keyboard:
 // https://www.drupal.org/node/897638
-
 .sr-only.focusable {
     &:active,
     &:focus {
@@ -60,7 +66,6 @@
 }
 
 // Hide visually and from screen readers, but maintain layout
-
 .invisible {
     visibility: hidden;
 }
