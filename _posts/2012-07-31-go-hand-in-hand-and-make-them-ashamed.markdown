@@ -1,6 +1,7 @@
 ---
 title: Go hand in hand and make them ashamed.
-enki_id: 10
+author: aleftie
+language: English
 categories: Philosophy
 ---
 One of the advantages being in the app industry is trying out new apps becomes your job. We've tried and used lots of apps along the way since our college years. Most of them are passable. Some of them are great and you can't do without. A remaining few of them are so exciting that you can't sleep for dreaming about it's possibilities.

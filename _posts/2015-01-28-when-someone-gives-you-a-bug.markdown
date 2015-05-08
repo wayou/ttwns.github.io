@@ -1,5 +1,7 @@
 ---
 title: 有人跟你回報了一個 bug
+author: yesyo
+language: Chinese
 categories: programmer humor
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Let us enjoy the ride.
-enki_id: 6
+author: aleftie
+language: English
 categories: Entrepreneurship, Philosophy
 ---
 We've been questioned a lot recently about how long we are going to hang on here as entrepreneurs before we lose all our money and the faith of our families. I must say, that is never a proper question for us.

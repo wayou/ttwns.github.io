@@ -1,6 +1,7 @@
 ---
 title: Every program has a purpose, and we're destined to meet.
-enki_id: 1
+author: aleftie
+language: English
 categories: Gridy Philosophy
 ---
 So they say.
