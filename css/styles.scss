@@ -7,14 +7,14 @@
 @import "mixins";
 
 // Reset & dependencies
-@import "normalize";
-@import "syntax";
-@import "print";
+@import "dependencies/normalize";
+@import "dependencies/syntax";
+@import "dependencies/print";
 
 // Base
-@import "base";
-@import "grid";
-@import "poole";
+@import "base/base";
+@import "base/grid";
+@import "base/poole";
 
 // Layouts
 
