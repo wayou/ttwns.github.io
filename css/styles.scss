@@ -2,19 +2,25 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-// Core variables and mixins
+// Variables & mixins
 @import "variables";
 @import "mixins";
 
-// Reset and dependencies
+// Reset & dependencies
 @import "normalize";
+@import "syntax";
 @import "print";
 
-// Core CSS
+// Base
 @import "base";
 @import "grid";
 @import "poole";
-@import "syntax";
+
+// Layouts
+
+// Modules
+
+// States
 
 // Utilities
 @import "helpers";
