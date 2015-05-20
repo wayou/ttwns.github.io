@@ -104,7 +104,17 @@
 
 // Media query
 // -----------
-// http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+// Only for `min-width` & `max-width` browser window media queries
+// Fallbacks are provided for old desktop browsers (IE8-) which don't support media query
+// To give them the desktop look while maintaining mobile-first
+// Note:
+//  1. Old IE needs another stylesheet like:
+//     `<!--[if lt IE 9]><link rel="stylesheet" href="css/old-ie.css"><![endif]-->`
+//  2. Define breakpoints in variables using SASS maps
+//  3. Declare the screen width you want old IE to display in `fix-queries-at`
+// Ref:
+//  http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+//  http://jakearchibald.github.io/sass-ie/
 @mixin at-least($screen-width) {
     @if $old-ie {
         @if $fix-queries-at >= (parseInt(map-get($breakpoints, $screen-width)) * 1px) {
