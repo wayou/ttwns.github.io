@@ -174,20 +174,3 @@
     }
 }
 
-// No media query fallbacks
-// ------------------------
-// Provide fallbacks for old desktop browsers(IE8-) which don't support media query.
-// Give them the desktop look back while maintaining mobile-first.
-//
-// Be sure to add and IE condintional comment:
-// `<!--[if lt IE 9]> <html class="old-ie"> <![endif]-->`
-// to your HTML `<head>`
-
-// @mixin breakpoint($screenWidth: 400px) {
-//     @if $old-ie {
-//         @content;
-//     } @else {
-//         @media screen and (min-width: $screenWidth) { @content; }
-//     }
-// }
-
