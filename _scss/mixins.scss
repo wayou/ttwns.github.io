@@ -130,7 +130,17 @@
     }
 }
 
-// @mixin until()
+@mixin until($screen-width) {
+    @if map-has-key($breakpoints, $screen-width) {
+        @media only screen and (max-width: map-get($breakpoints, $screen-width)) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
 
 // Media query target retina display
 // ---------------------------------
