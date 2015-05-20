@@ -106,10 +106,7 @@
 // -----------
 // http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 @mixin at-least($screen-width) {
-    $no-queries: false !default;
-    $fix-queries-at: 960px !default;
-
-    @if $no-queries {
+    @if $old-ie {
         @if $fix-queries-at >= (parseInt(map-get($breakpoints, $screen-width)) * 1px) {
             @content;
         }
@@ -121,7 +118,6 @@
                 @content;
             }
         }
-
         // If the key doesn't exist in the map
         @else {
             @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
