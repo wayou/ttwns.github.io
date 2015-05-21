@@ -1,0 +1,8 @@
+scss_files: '_scss/**/*.scss'
+
+exclude: [
+            '_scss/base/grid.scss',
+			'_scss/base/poole.scss',
+			'_scss/dependencies/normalize.scss',
+			'_scss/dependencies/syntax.scss'
+		 ]
