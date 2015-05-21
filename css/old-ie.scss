@@ -2,4 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+$old-ie: true;
+$fix-queries-at: 65em;
+
 @import "main";

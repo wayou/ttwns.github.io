@@ -1,0 +1,8 @@
+$breakpoints: (
+  'small'  : ( 767px ),
+  'medium' : ( 992px ),
+  'large'  : ( 1200px )
+);
+
+$old-ie: false !default;
+$fix-queries-at: 960px !default;
