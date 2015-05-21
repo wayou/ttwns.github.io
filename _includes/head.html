@@ -21,7 +21,12 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/styles.css">
+  <!--<![endif]-->
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/apple-touch-icon-144-precomposed.png">
