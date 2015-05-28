@@ -37,10 +37,10 @@ html {
 hr {
     display: block;
     height: 1px;
+    padding: 0;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
-    padding: 0;
 }
 
 // Remove the gap between audio, canvas, iframes,
@@ -57,9 +57,9 @@ video {
 
 // Remove default fieldset styles.
 fieldset {
+    padding: 0;
     border: 0;
     margin: 0;
-    padding: 0;
 }
 
 // Allow only vertical resizing of textareas.

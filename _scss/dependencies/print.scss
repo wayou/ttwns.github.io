@@ -11,9 +11,9 @@
         &:before,
         &:after {
             background: transparent !important;
-            color: #000 !important; // Black prints faster:
-                                    // http://www.sanbeiji.com/archives/953
             box-shadow: none !important;
+            color: $black !important; // Black prints faster:
+                                      // http://www.sanbeiji.com/archives/953
             text-shadow: none !important;
         }
     }
@@ -26,11 +26,11 @@
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
 
     // Don't show links that are fragment identifiers,
@@ -39,7 +39,7 @@
     a[href^="#"],
     a[href^="javascript:"] {
         &:after {
-            content: "";
+            content: '';
         }
     }
 
