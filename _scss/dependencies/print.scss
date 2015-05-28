@@ -4,6 +4,7 @@
 // http://www.phpied.com/delay-loading-your-print-css/
 // ===================================================
 
+// scss-lint:disable ImportantRule, QualifyingElement
 @media print {
     * {
         &,

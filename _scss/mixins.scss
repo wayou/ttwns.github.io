@@ -1,5 +1,6 @@
 @import "variables";
 @import "functions";
+// scss-lint:disable VendorPrefix
 
 // Opacity
 @mixin opacity($opacity) {
