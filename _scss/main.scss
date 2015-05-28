@@ -4,18 +4,18 @@
 
 
 // Variables & mixins
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 
 // Reset & dependencies
-@import "dependencies/normalize";
-@import "dependencies/syntax";
-@import "dependencies/print";
+@import 'dependencies/normalize';
+@import 'dependencies/syntax';
+@import 'dependencies/print';
 
 // Base
-@import "base/base";
-@import "base/grid";
-@import "base/poole";
+@import 'base/base';
+@import 'base/grid';
+@import 'base/poole';
 
 // Layouts
 
@@ -24,4 +24,4 @@
 // States
 
 // Utilities
-@import "helpers";
+@import 'helpers';

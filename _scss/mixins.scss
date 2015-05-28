@@ -1,5 +1,6 @@
-@import "variables";
-@import "functions";
+// scss-lint:disable VendorPrefix
+@import 'variables';
+@import 'functions';
 
 // Opacity
 @mixin opacity($opacity) {
@@ -27,15 +28,15 @@
             $rem: append($rem, $value);
         } @else {
             $unit: unit($value);
-            $val: parseInt($value);
+            $val: parse-int($value);
 
-            @if $unit == "px" {
-                $px : append($px,  $value);
+            @if $unit == 'px' {
+                $px : append($px, $value);
                 $rem: append($rem, ($val / 16 + rem));
             }
 
-            @if $unit == "rem" {
-                $px : append($px,  ($val * 16 + px));
+            @if $unit == 'rem' {
+                $px : append($px, ($val * 16 + px));
                 $rem: append($rem, $value);
             }
         }
@@ -57,11 +58,11 @@
 //   2. fix web font (esp. icon fonts) rendering
 @mixin font-smoothing($value: on) {
     @if $value == on {
-        -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale; // Firefox 25+
+        -webkit-font-smoothing: antialiased;
     } @else {
-        -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto; // Firefox 25+
+        -webkit-font-smoothing: subpixel-antialiased;
     }
 }
 
@@ -71,12 +72,12 @@
 // Keywords which contain more than 1 word need quotes around.
 // e.g. `@include gradient-directional(#fff, #999, "to right");`
 //
-// The `convertKeywordsToAngles()` function is used to fix the issue that
+// The `convert-keywords-to-angles()` function is used to fix the issue that
 // the gradient angle of prefixed middle syntax differs from that of the unprefixed new syntax.
 // Ref: http://www.quirksmode.org/css/images/angles.html
 @mixin gradient-directional($start-color: #555, $end-color: #333, $stddeg: 45deg) {
     @if type-of($stddeg) != number {
-        $stddeg: convertKeywordsToAngles($stddeg);
+        $stddeg: convert-keywords-to-angles($stddeg);
     }
 
     $deg: 90deg - $stddeg;
@@ -91,13 +92,13 @@
 // Dependencies:
 //  1. Modernizr
 //  2. one PNG fallback image
-@mixin background-image($name){
+@mixin background-image($name) {
     $image-path: '../img' !default;
     $fallback-extension: 'png' !default;
 
     background-image: url(#{$image-path}/#{$name}.svg);
 
-    .no-svg &{
+    .no-svg & {
         background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
     }
 }
@@ -117,7 +118,7 @@
 //  http://jakearchibald.github.io/sass-ie/
 @mixin at-least($screen-width) {
     @if $old-ie {
-        @if $fix-queries-at >= (parseInt(map-get($breakpoints, $screen-width)) * 1px) {
+        @if $fix-queries-at >= (parse-int(map-get($breakpoints, $screen-width)) * 1px) {
             @content;
         }
     } @else {
@@ -127,11 +128,9 @@
             @media only screen and (min-width: map-get($breakpoints, $screen-width)) {
                 @content;
             }
-        }
-        // If the key doesn't exist in the map
-        @else {
-            @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-                + "Please make sure it is defined in `$breakpoints` map.";
+        } @else {
+            @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+                + 'Please make sure it is defined in `$breakpoints` map.';
         }
     }
 }
@@ -141,10 +140,9 @@
         @media only screen and (max-width: map-get($breakpoints, $screen-width)) {
             @content;
         }
-    }
-    @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-            + "Please make sure it is defined in `$breakpoints` map.";
+    } @else {
+        @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
 
@@ -165,11 +163,11 @@
 // Source: http://css-tricks.com/snippets/css/retina-display-media-query/
 @mixin hidpi($ratio: 1.3) {
     @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
-           only screen and (   min--moz-device-pixel-ratio: $ratio),
-           only screen and (     -o-min-device-pixel-ratio: #{$ratio} / 1),
-           only screen and (        min-device-pixel-ratio: $ratio),
-           only screen and (                min-resolution: round($ratio) * 96dpi),
-           only screen and (                min-resolution: $ratio * 1dppx) {
+           only screen and (min--moz-device-pixel-ratio: $ratio),
+           only screen and (-o-min-device-pixel-ratio: #{$ratio} / 1),
+           only screen and (min-device-pixel-ratio: $ratio),
+           only screen and (min-resolution: round($ratio) * 96dpi),
+           only screen and (min-resolution: $ratio * 1dppx) {
         @content;
     }
 }
