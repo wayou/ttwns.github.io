@@ -2,7 +2,7 @@
 title: Why do we want to start our own business?
 author: aleftie
 language: English
-categories: Entrepreneurship
+categories: entrepreneurship
 ---
 There was a time when we both were still working for others. We wrote down some of our thoughts back then in order to encourage ourselves to get out of our dead-end jobs. (Words almost stay the same as they are first written, only some conjunctions added to make sentences read like a sequence.)
 
