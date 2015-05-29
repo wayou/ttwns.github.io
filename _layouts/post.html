@@ -4,9 +4,24 @@ layout: default
 
 {% assign language = site.data.languages[page.language] %}
 <article class="post" lang="{{ language.value] }}">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+    <h1 class="post-title">{{ page.title }}</h1>
+    <span class="post-date">{{ page.date | date_to_string }}</span>
+    {{ content }}
+
+<!--     {% assign post = page %}
+    {% if post.categories.size > 0 %}
+        {% for post_category in post.categories %}
+            {% for data_category in site.data.categories %}
+                {% if data_category.slug == post_category %}
+                    {% assign category = data_category %}
+                {% endif %}
+            {% endfor %}
+            {% if category %}
+                <a href="/category/{{ category.slug }}/">{{ category.name }}</a>
+            {% endif %}
+        {% endfor %}
+    {% endif %} -->
+
 </article>
 
 <div class="related">
