@@ -1,0 +1,44 @@
+# Our products
+- slug: treader
+  name: TReader
+
+- slug: gridy
+  name: Gridy
+
+# Brands
+- slug: iphone
+  name: iPhone
+
+- slug: android
+  name: Android
+
+# Concepts
+- slug: philosophy
+  name: philosophy
+
+- slug: thinkering
+  name: Thinkering
+
+- slug: entrepreneurship
+  name: entrepreneurship
+
+- slug: design
+  name: design
+
+- slug: publishing
+  name: publishing
+
+- slug: humor
+  name: humor
+
+# Roles
+- slug: designer
+  name: designer
+
+- slug: programmer
+  name: programmer
+
+- slug: test
+  name: test
+
+
