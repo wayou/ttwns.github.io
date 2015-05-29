@@ -12,10 +12,14 @@
 - slug: android
   name: Android
 
-# Concepts
+# Science
 - slug: philosophy
   name: philosophy
 
+- slug: literature
+- name: literature
+
+# Concepts
 - slug: thinkering
   name: Thinkering
 
@@ -38,7 +42,5 @@
 - slug: programmer
   name: programmer
 
-- slug: test
-  name: test
 
 
