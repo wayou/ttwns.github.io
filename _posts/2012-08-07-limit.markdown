@@ -2,7 +2,7 @@
 title: 界限
 author: aleftie
 language: Chinese
-categories: 哲學
+categories: philosophy
 ---
 多年前還在台大讀書的時候，對楊植勝老師哲學概論課堂上的一段比喻印象深刻。
 

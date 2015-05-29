@@ -2,7 +2,7 @@
 title: TidyTilt for iPhone 開箱文
 author: aleftie
 language: Chinese
-categories: 小玩意兒 iPhone Thinkering
+categories: iPhone Thinkering
 ---
 
 上個禮拜終於收到我們支持的第一個 kickstarter 計畫：[TidyTilt for iPhone](http://www.tidytilt.com/)，一收到當然馬上拆開來，四個閃亮亮五顏六色的小玩意兒就躺在桌上。

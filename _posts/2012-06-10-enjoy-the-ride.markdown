@@ -2,7 +2,7 @@
 title: 請讓我們享受這趟旅程
 author: aleftie
 language: Chinese
-categories: 創業 哲學
+categories: entrepreneurship philosophy
 ---
 最近常被置疑說，在輸光金錢跟家人信賴前，我們還要撐多久。我得說，對我們來說這從來不是個適宜的問題。我想一個人並不會僅為了一個好價錢出賣自己的生命，亦不會堅定地向南走卻最後發現自己走到了北方。
 
