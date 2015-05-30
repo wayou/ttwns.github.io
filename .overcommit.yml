@@ -25,3 +25,16 @@ PreCommit:
   ScssLint:
     enabled: true
     requires_files: false
+
+PrePush:
+  ALL:
+    quite: false
+
+  HtmlProofer:
+    enabled: true
+    description: 'Analyzing HTML with HTML-Proofer'
+    required_executable: 'htmlproof'
+    flags: ['./_site']
+    requires_files: false
+    install_command: 'gem install html-proofer'
+    include: '_site/**/*.html'
