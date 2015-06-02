@@ -2,7 +2,7 @@
 title: 部落格重新設計之一
 author: aleftie
 language: Chinese
-categories: 設計
+categories: design
 ---
 前陣子花了點時間重新設計了部落格，之前的是架在 [Tumblr](http://www.tumblr.com) 上，當時因為還在草創時期，也不算有設計，只是任意選用了一個 Tumblr 內建的版型，再加上粗淺的 "Responsive Web Design" 而已（細心的讀者應該會發現，看我們的網頁不需要雙指縮放或橫向移動）；先有內容似乎是比較重要的事情。
 

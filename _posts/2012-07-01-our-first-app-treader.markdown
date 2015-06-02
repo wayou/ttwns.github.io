@@ -2,7 +2,7 @@
 title: TReader - 旅人兄弟首隻 APP 將於數週內上市
 author: aleftie
 language: Chinese
-categories: TReader 安卓 出版 閱讀器
+categories: TReader Android publishing
 ---
 經過近一個月的纏鬥，設計、開發、再設計、再開發，加上不斷畫圖跟不停測試，TReader 終於到了我們可以為它寫篇 blog 的時候了，先來瞧瞧 icon。
 ![TReader's icon]({{ site_url }}/assets/images/treader-icon-set.png "TReader's icon")

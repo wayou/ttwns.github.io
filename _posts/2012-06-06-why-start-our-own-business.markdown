@@ -2,7 +2,7 @@
 title: 為什麼我們想創業？
 author: aleftie
 language: Chinese
-categories: 創業
+categories: entrepreneurship
 ---
 當我們還在為別人工作的時候，有段時間我們曾寫下一些當時的想法，以鼓勵自己逃離看不到明天的工作。（大部分字句都沒變動，只是加了一些連接詞讓句子讀來有先後順序的感覺。）
 

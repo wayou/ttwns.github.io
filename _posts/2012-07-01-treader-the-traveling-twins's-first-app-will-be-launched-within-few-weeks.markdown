@@ -2,7 +2,7 @@
 title: TReader - The Traveling Twins's first app will be launched within few weeks!!
 author: aleftie
 language: English
-categories: TReader Android Publishing Reader
+categories: TReader Android publishing
 ---
 <blockquote>
 <strong>TReader</strong> </br>

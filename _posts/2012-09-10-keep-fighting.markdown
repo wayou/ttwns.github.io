@@ -2,7 +2,7 @@
 title: 人生就是不停地戰鬥
 author: aleftie
 language: Chinese
-categories: TReader 哲學
+categories: TReader philosophy
 ---
 8.29.2012 標誌著旅人兄弟的第一次敗北，根據 Google Play 的來信：
 
