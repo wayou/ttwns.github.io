@@ -4,10 +4,12 @@
 
 ### Linters
 
-Using git hooks with [overcommit](https://github.com/brigade/overcommit)
+Using git hooks with [overcommit](https://github.com/brigade/overcommit).
 
 * [ScssLint](https://github.com/brigade/scss-lint): pre-commit
 * [HTMLProofer](https://github.com/gjtorikian/html-proofer): pre-push
+
+Make sure to run `overcommit --install` after you clone this repo.
 
 #### Note
 
