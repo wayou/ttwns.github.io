@@ -1,4 +1,4 @@
-module Overcommit::Hook::PrePush
+module Overcommit::Hook::PreCommit
   # Validate HTML output
   class HtmlProofer < Base
     def run
