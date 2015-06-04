@@ -7,13 +7,13 @@
 Using git hooks with [overcommit](https://github.com/brigade/overcommit).
 
 * [ScssLint](https://github.com/brigade/scss-lint): pre-commit
-* [HTMLProofer](https://github.com/gjtorikian/html-proofer): pre-push
+* [HTMLProofer](https://github.com/gjtorikian/html-proofer): pre-commit
 
 Make sure to run the following command after you clone this repo, to initialize overcommit and sign custom hook.
 
 ```sh
 overcommit --install
-overcommit --sign pre-push
+overcommit --sign pre-commit
 ```
 
 #### Note
