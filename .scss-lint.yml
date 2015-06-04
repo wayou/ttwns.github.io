@@ -8,8 +8,84 @@ exclude:
     - _scss/dependencies/syntax.scss
 
 linters:
+    BangFormat:
+        severity: error
+
+    BemDepth:
+        severity: error
+
+    BorderZero:
+        severity: error
+
+    ColorKeyword:
+        severity: error
+
+    ColorVariable:
+        severity: warning
+
+    Comment:
+        severity: error
+
+    DebugStatement:
+        severity: error
+
+    DeclarationOrder:
+        severity: error
+
+    DuplicateProperty:
+        severity: error
+
+    ElsePlacement:
+        severity: error
+
+    EmptyLineBetweenBlocks:
+        severity: error
+
+    EmptyRule:
+        severity: error
+
+    FinalNewline:
+        severity: error
+
+    HexLength:
+        severity: error
+
+    HexNotation:
+        severity: error
+
+    HexValidation:
+        severity: error
+
+    IdSelector:
+        severity: error
+
+    ImportantRule:
+        severity: error
+
+    ImportPath:
+        severity: error
+
     Indentation:
         width: 4
+        severity: error
+
+    LeadingZero:
+        severity: error
+
+    MergeableSelector:
+        severity: error
+
+    NameFormat:
+        severity: error
+
+    NestingDepth:
+        severity: error
+
+    PlaceholderInExtend:
+        severity: error
+
+    PropertyUnits:
+        severity: error
 
     PropertySortOrder:
         order:
@@ -223,3 +299,75 @@ linters:
             - page-break-inside
             - orphans
             - widows
+        severity: error
+
+    PropertySpelling:
+        severity: error
+
+    QualifyingElement:
+        severity: error
+
+    SelectorDepth:
+        severity: error
+
+    SelectorFormat:
+        severity: error
+
+    Shorthand:
+        severity: error
+
+    SingleLinePerProperty:
+        severity: error
+
+    SingleLinePerSelector:
+        severity: error
+
+    SpaceAfterComma:
+        severity: error
+
+    SpaceAfterPropertyColon:
+        severity: error
+
+    SpaceAfterPropertyName:
+        severity: error
+
+    SpaceBeforeBrace:
+        severity: error
+
+    SpaceBetweenParens:
+        severity: error
+
+    StringQuotes:
+        severity: error
+
+    TrailingSemicolon:
+        severity: error
+
+    TrailingZero:
+        enabled: true
+        severity: error
+
+    UnnecessaryMantissa:
+        severity: error
+
+    UnnecessaryParentReference:
+        severity: error
+
+    UrlFormat:
+        severity: error
+
+    UrlQuotes:
+        severity: error
+
+    VariableForProperty:
+        enabled: true
+        properties:
+            - color
+            - font
+        severity: warning
+
+    VendorPrefix:
+        severity: error
+
+    ZeroUnit:
+        severity: error
