@@ -18,9 +18,9 @@
 }
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    color: $text-color;
+    font-size: $ms-base;
+    line-height: $ms-ratio-second;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 // These selection rule sets have to be separate.
 // Customize the background color to match your design.
 ::selection {
-    background: #b3d4fc;
+    background: $highlight;
     text-shadow: none;
 }
 
@@ -77,10 +77,5 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
-//
-// Author's custom styles
-// ======================
-
 
 
