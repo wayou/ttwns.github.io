@@ -24,7 +24,11 @@ PreCommit:
 
   ScssLint:
     enabled: true
+    description: 'Analyzing SCSS with scss-lint'
     requires_files: false
+    required_executable: 'scss-lint'
+    install_command: 'gem install scss-lint'
+    flags: ['-c', '.scss-lint.yml']
 
   HtmlProofer:
     enabled: true
