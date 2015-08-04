@@ -1,9 +1,10 @@
 @import "modular-scale/ratios";
 
-$ms-base:  1em      !default;
-$ms-ratio: $golden  !default;
-$ms-range: null     !default;
-$ms-fluid: true     !default;
+$ms-base:  1.125em       !default;
+$ms-ratio: $major-third  !default;
+$ms-ratio-second: $fifth !default;
+$ms-range: null          !default;
+$ms-fluid: true          !default;
 
 @import "modular-scale/tests";
 
