@@ -8,8 +8,9 @@
 @import 'mixins';
 
 // Reset & dependencies
-@import 'dependencies/normalize';
-@import 'dependencies/syntax';
+@import 'dependencies/vendor/normalize';
+@import 'dependencies/vendor/modular-scale';
+@import 'dependencies/vendor/syntax';
 @import 'dependencies/print';
 
 // Base

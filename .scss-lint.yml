@@ -4,8 +4,7 @@ exclude:
     - _scss/functions.scss
     - _scss/base/grid.scss
     - _scss/base/poole.scss
-    - _scss/dependencies/normalize.scss
-    - _scss/dependencies/syntax.scss
+    - _scss/dependencies/vendor/*.scss
 
 linters:
     BangFormat:
