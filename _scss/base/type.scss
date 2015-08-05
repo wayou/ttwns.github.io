@@ -11,3 +11,23 @@ h5,
 h6 {
     font-family: $sans-serif;
 }
+
+h1 {
+    @include rem(line-height, $baseline * 2);
+    font-size: ms(4);
+}
+
+h2 {
+    @include rem(line-height, $baseline * 2);
+    font-size: ms(3);
+}
+
+h3 {
+    @include rem(line-height, $baseline);
+    font-size: ms(2);
+}
+
+h4 {
+    @include rem(line-height, $baseline);
+    font-size: ms(1);
+}
