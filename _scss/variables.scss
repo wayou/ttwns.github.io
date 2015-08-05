@@ -10,6 +10,10 @@ $serif: Calluna, 'Hoefler Text', Palatino, Garamond, 'Times New Roman', serif;
 $sans-serif: 'myriad-pro', Calibri, 'Lucida Grande', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
 $mono: menlo, 'Source Code Pro', Consolas, Courier, monospace;
 
+// Modular Scale & Vertical Rhythm
+$font-size-base: 18px;
+$baseline: 1.5rem;
+
 $breakpoints: (
     'small': (767px),
     'medium': (992px),
