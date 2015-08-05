@@ -16,6 +16,9 @@
 //  2. Accepts (almost) any property as an input, not only `font-size`
 //  3. Accepts multiple values, like 10px 20px
 //
+// Note:
+// Define `$font-size-base` in pixels first in your variables
+//
 // Source: http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
 @mixin rem($property, $values) {
     $px : ();
@@ -32,11 +35,11 @@
 
             @if $unit == 'px' {
                 $px : append($px, $value);
-                $rem: append($rem, ($val / 16 + rem));
+                $rem: append($rem, ($val / parse-int($font-size-base) + rem));
             }
 
             @if $unit == 'rem' {
-                $px : append($px, ($val * 16 + px));
+                $px : append($px, ($val * parse-int($font-size-base) + px));
                 $rem: append($rem, $value);
             }
         }
