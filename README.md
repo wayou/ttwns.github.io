@@ -25,6 +25,15 @@ sudo su -
 gem install overcommit scss_lint html-proofer
 ```
 
+### Run development server with LiveReload
+
+* Install LiveReload browser extensions
+* Run with command:
+
+```sh
+$ guard
+```
+
 ## License
 
 The content of this project itself is licensed under the
