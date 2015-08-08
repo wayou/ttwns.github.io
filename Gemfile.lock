@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.8)
+    autoprefixer-rails (2.2.0.20140804)
+      execjs
     blankslate (2.1.2.4)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -95,6 +97,12 @@ GEM
     notiffany (0.0.7)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    octopress-autoprefixer (1.0.1)
+      autoprefixer-rails (~> 2.2)
+      jekyll (>= 2.0)
+      octopress-hooks (~> 2.0)
+    octopress-hooks (2.6.1)
+      jekyll (>= 2.0)
     overcommit (0.25.0)
       childprocess (~> 0.5.6)
       iniparse (~> 1.4)
@@ -140,5 +148,6 @@ DEPENDENCIES
   guard-livereload
   html-proofer
   jekyll
+  octopress-autoprefixer
   overcommit
   scss-lint
