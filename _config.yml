@@ -27,3 +27,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Plugins
+gems:
+  - octopress-autoprefixer
