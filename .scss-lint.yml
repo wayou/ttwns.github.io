@@ -359,7 +359,7 @@ linters:
         severity: error
 
     VariableForProperty:
-        enabled: true
+        enabled: false
         properties:
             - color
             - font
