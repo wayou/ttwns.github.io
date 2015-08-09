@@ -7,4 +7,6 @@ gem 'overcommit'
 gem 'guard'
 gem 'guard-jekyll-plus'
 gem 'guard-livereload'
-gem 'octopress-autoprefixer'
+
+gem 'octopress-hooks'
+gem 'autoprefixer-rails'
