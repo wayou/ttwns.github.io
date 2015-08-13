@@ -78,7 +78,7 @@
 // The `convert-keywords-to-angles()` function is used to fix the issue that
 // the gradient angle of prefixed middle syntax differs from that of the unprefixed new syntax.
 // Ref: http://www.quirksmode.org/css/images/angles.html
-@mixin gradient-directional($start-color: #555, $end-color: #333, $stddeg: 45deg) {
+@mixin gradient-directional($start-color: $gray, $end-color: $gray-dark, $stddeg: 45deg) {
     @if type-of($stddeg) != number {
         $stddeg: convert-keywords-to-angles($stddeg);
     }
