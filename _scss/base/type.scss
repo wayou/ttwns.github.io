@@ -41,3 +41,10 @@ p {
     @include rem(margin, 0 0 $baseline);
 }
 
+// Lists
+ol,
+ul {
+    @include rem(margin, 0 0 $baseline);
+    padding-left: 0;
+}
+
