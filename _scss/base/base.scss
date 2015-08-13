@@ -33,8 +33,12 @@ body {
 // These selection rule sets have to be separate.
 // Customize the background color to match your design.
 ::selection {
-    background: $highlight;
+    background: $text-highlight;
     text-shadow: none;
+}
+
+mark {
+    background: $text-highlight;
 }
 
 // A better looking default horizontal rule
