@@ -1,7 +1,7 @@
 //
 // Typography
 // ==========
-
+// Headings
 
 h1,
 h2,
@@ -14,25 +14,25 @@ h6 {
 
 h1 {
     @include rem(line-height, $baseline * 2);
-    @include rem(margin, 0 0 $baseline 0);
+    @include rem(margin, 0 0 $baseline);
     font-size: ms(4);
 }
 
 h2 {
     @include rem(line-height, $baseline * 2);
-    @include rem(margin, 0 0 $baseline 0);
+    @include rem(margin, 0 0 $baseline);
     font-size: ms(3);
 }
 
 h3 {
     @include rem(line-height, $baseline);
-    @include rem(margin, 0 0 $baseline 0);
+    @include rem(margin, 0 0 $baseline);
     font-size: ms(2);
 }
 
 h4 {
     @include rem(line-height, $baseline);
-    @include rem(margin, 0 0 $baseline 0);
+    @include rem(margin, 0 0 $baseline);
     font-size: ms(1);
 }
 
