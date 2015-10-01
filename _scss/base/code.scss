@@ -1,0 +1,63 @@
+//
+// Code (inline and block)
+// =======================
+
+
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+    font-family: $mono;
+    font-size: ms(-1);
+}
+
+// Inline code
+code {
+    padding: 2px 4px;
+    background-color: $gray-lighter;
+    color: $code-inline;
+}
+
+// User input typically entered via keyboard
+kbd {
+    padding: 2px 4px;
+    border: 1px solid $gray-light;
+    border-radius: 3px;
+    background-color: $gray-lightest;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px $white inset;
+
+    kbd {
+        padding: 0;
+        box-shadow: none;
+        font-size: 100%;
+        font-weight: bold;
+    }
+}
+
+// Blocks of code
+pre {
+    display: block;
+    padding: $baseline/2 $baseline;
+    margin: 0 0 $baseline;
+    background-color: $gray-lighter;
+    color: $gray-dark;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: inherit;
+        font-size: inherit;
+        white-space: pre-wrap;
+    }
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+    max-height: $baseline * 14; // 384px
+    overflow-y: scroll;
+}
