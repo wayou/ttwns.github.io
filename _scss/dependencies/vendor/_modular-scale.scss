@@ -1,6 +1,6 @@
 @import "modular-scale/ratios";
 
-$ms-base:  $font-size-base       !default;
+$ms-base:  1em                   !default;
 $ms-ratio: $major-third, $fifth  !default;
 $ms-range: null                  !default;
 $ms-fluid: true                  !default;
