@@ -23,11 +23,16 @@ $mono: menlo, 'Source Code Pro', Consolas, Courier, monospace;
 $baseline: 1.5rem;
 
 $page-margin: $baseline;
+// Grid
+$gutter: $baseline / 3;
+$push:   true;
+$pull:   true;
 
 $breakpoints: (
-    'small': (767px),
-    'medium': (992px),
-    'large': (1200px)
+    palm: 480px,
+    lap: 768px,
+    portable: 1023px,
+    desk: 1366px
 );
 
 $old-ie: false !default;
