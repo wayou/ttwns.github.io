@@ -114,7 +114,7 @@
 //  1. Old IE needs another stylesheet like:
 //     `<!--[if lt IE 9]><link rel="stylesheet" href="css/old-ie.css"><![endif]-->`
 //  2. Define breakpoints in variables using SASS maps
-//  3. Declare the screen width you want old IE to display in `fix-queries-at`
+//  3. Declare the screen width you want old IE to display in `fix-queries-at` in `px`
 // Ref:
 //  http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 //  http://jakearchibald.github.io/sass-ie/
@@ -131,7 +131,7 @@
                 @content;
             }
         } @else {
-            @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+            @warn 'Unfortunately, no value could be retrieved from `#{$screen-width}`. '
                 + 'Please make sure it is defined in `$breakpoints` map.';
         }
     }
@@ -154,7 +154,7 @@
             @content;
         }
     } @else {
-        @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+        @warn 'Unfortunately, no value could be retrieved from `#{$screen-width}`. '
             + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
