@@ -139,7 +139,7 @@
 
 @mixin between($screen-width-min, $screen-width-max) {
     @if map-has-key($breakpoints, $screen-width-min) and map-has-key($breakpoints, $screen-width-max) {
-        @media only screen (min-width: map-get($breakpoints, $screen-width-min)) and (max-width: map-get($breakpoints, $screen-width-max)) {
+        @media only screen and (min-width: map-get($breakpoints, $screen-width-min)) and (max-width: map-get($breakpoints, $screen-width-max)) {
             @content;
         }
     } @else {
