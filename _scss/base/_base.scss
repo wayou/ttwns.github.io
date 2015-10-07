@@ -19,8 +19,13 @@
 
 html {
     color: $text-color;
-    font-size: 18px;
+    font-size: $font-size-base;
     line-height: 1.5;
+
+    @include at-least(desk) {
+        font-size: $font-size-base-for-desk;
+    }
+
 }
 
 body {
