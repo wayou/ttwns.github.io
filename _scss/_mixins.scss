@@ -137,6 +137,17 @@
     }
 }
 
+@mixin between($screen-width-min, $screen-width-max) {
+    @if map-has-key($breakpoints, $screen-width-min) and map-has-key($breakpoints, $screen-width-max) {
+        @media only screen (min-width: map-get($breakpoints, $screen-width-min)) and (max-width: map-get($breakpoints, $screen-width-max)) {
+            @content;
+        }
+    } @else {
+        @warn 'Unfortunately, no value could be retrieved from `#{$screen-width-min}` or `#{$screen-width-max}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
 @mixin until($screen-width) {
     @if map-has-key($breakpoints, $screen-width) {
         @media only screen and (max-width: map-get($breakpoints, $screen-width)) {
