@@ -8,21 +8,22 @@
     filter: alpha(opacity=($opacity * 100));
 }
 
-// Px/Rem converter
+// Rem/px converter
 // ----------------
-// Convert `px` to `rem` and provide pixel font size fallback for IE8
+// Convert `rem` to `px` and provide pixel font size fallback for IE8
 // Features:
-//  1. Accepts either `px` or `rem` as an input value
-//  2. Accepts (almost) any property as an input, not only `font-size`
-//  3. Accepts multiple values, like 10px 20px
+//  1. Accepts (almost) any property as an input, not only `font-size`
+//  2. Accepts multiple values, like 10px 20px
 //
 // Note:
-// Define `$font-size-base` in pixels first in your variables
+// Define `$font-size-base-old-ie` in pixels first in your variables
 //
 // Source: http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
 @mixin rem($property, $values) {
     $px : ();
     $rem: ();
+    $old-ie: false !default;
+    $font-size-base-old-ie: 16px !default;
 
     @each $value in $values {
 
@@ -33,13 +34,8 @@
             $unit: unit($value);
             $val: parse-int($value);
 
-            @if $unit == 'px' {
-                $px : append($px, $value);
-                $rem: append($rem, ($val / parse-int($font-size-base) + rem));
-            }
-
             @if $unit == 'rem' {
-                $px : append($px, ($val * parse-int($font-size-base) + px));
+                $px : append($px, ($val * parse-int($font-size-base-old-ie) + px));
                 $rem: append($rem, $value);
             }
         }
@@ -48,8 +44,11 @@
     @if $px == $rem {
         #{$property}: $px;
     } @else {
-        #{$property}: $px;
-        #{$property}: $rem;
+        @if $old-ie {
+            #{$property}: $px;
+        } @else {
+            #{$property}: $rem;
+        }
     }
 }
 
