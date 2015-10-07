@@ -25,7 +25,6 @@ $font-size-base-for-desk: 22px;
 $font-size-base-old-ie: $font-size-base-for-desk;
 $baseline: 1.5rem;
 
-$page-margin: $baseline;
 // Grid
 $gutter: $baseline / 3;
 $push:   true;
@@ -37,6 +36,8 @@ $breakpoints: (
     portable: 1023px,
     desk: 1366px
 );
+
+$page-margin: $baseline;
 
 $old-ie: false !default;
 $fix-queries-at: 960px !default;
