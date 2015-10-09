@@ -41,3 +41,11 @@
     			@return null;
     }
 }
+// Simple text color switcher based on background color lightness
+@function dark-or-light($color) {
+    @if (lightness($color) > 50) {
+        @return $text-color; // dark on light
+        } @else {
+            @return $white; // light on dark
+    }
+}
