@@ -21,3 +21,15 @@ button,
 .btn--round {
     @include rem(border-radius, $baseline);
 }
+
+@each $accent-color, $color in $accent-colors {
+    .btn--outline-#{$accent-color} {
+        background: none;
+        color: $color;
+
+        &:hover {
+            background-color: #{$color};
+            color: $white;
+        }
+    }
+}
