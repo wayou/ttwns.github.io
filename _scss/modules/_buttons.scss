@@ -17,3 +17,7 @@ button,
         outline: 0;
     }
 }
+
+.btn--round {
+    @include rem(border-radius, $baseline);
+}
