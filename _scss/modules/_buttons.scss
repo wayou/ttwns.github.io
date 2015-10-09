@@ -1,0 +1,19 @@
+//
+// Buttons
+// =======
+
+button,
+.btn {
+    @include rem(padding, $baseline/4 $baseline/1.5);
+    @include font-smoothing(on);
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 0;
+    appearance: none;
+    font-family: $sans-serif;
+    font-weight: 600;
+
+    &:focus {
+        outline: 0;
+    }
+}
