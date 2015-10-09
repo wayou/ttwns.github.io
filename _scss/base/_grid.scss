@@ -1,0 +1,361 @@
+// Grid System
+// ===========
+
+
+// Set the spacing between your grid items.
+$gutter:                24px !default;
+
+// Would you like Sass’ silent classes, or regular CSS classes?
+$use-silent-classes:    false !default;
+
+// Would you like push and pull classes enabled?
+$push:                  false !default;
+$pull:                  false !default;
+
+// Define breakpoints
+$breakpoints: (
+    palm: 480px,
+    lap: 768px,
+    portable: 1023px,
+    desk: 1366px
+) !default;
+
+// Define which namespaced breakpoints you would like to generate for each of
+// widths, push and pull. This is handy if you only need pull on, say, desk, or
+// you only need a new width breakpoint at mobile sizes. It allows you to only
+// compile as much CSS as you need. All are turned on by default, but you can
+// add and remove breakpoints at will.
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk') !default;
+$breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk') !default;
+$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk') !default;
+
+// You do not need to edit anything from this line onward; csswizardry-grids is
+$class-type: if($use-silent-classes, unquote("%"), unquote("."));
+
+//
+// Mixins
+// ------
+// These mixins are for the library to use only, you should not need to modify
+// them at all.
+//
+// Enclose a block of code with a media query as named in `$breakpoints`.
+@mixin grid-media-query($media-query) {
+    $breakpoint-found: false;
+
+    @each $breakpoint in $breakpoints {
+        $name: nth($breakpoint, 1);
+        $declaration: nth($breakpoint, 2);
+
+        @if $media-query == $name and $declaration {
+            $breakpoint-found: true;
+
+            @media only screen and (min-width: #{$declaration}) {
+                @content;
+            }
+        }
+    }
+
+    @if not $breakpoint-found {
+        @warn "Breakpoint ‘#{$media-query}’ does not exist";
+    }
+}
+
+// Remove any margins and paddings that might affect the grid system.
+#{$class-type}grid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+// 1. Cause columns to stack side-by-side.
+// 2. Prevent empty grid items from stacking on top of each other.
+// 3. Space columns apart.
+#{$class-type}grid__item {
+    float: left;              // [1]
+    min-height: 1px;          // [2]
+    padding-right: $gutter;   // [3]
+    padding-left: $gutter;    // [3]
+}
+
+// Gutterless grids have all the properties of regular grids, minus any spacing.
+// Extends `.grid`.
+#{$class-type}grid--full {
+    > #{$class-type}grid__item {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// Centered grids align grid items centrally without needing to use push or pull
+// classes. Extends `.grid`.
+#{$class-type}grid--center {
+    > #{$class-type}grid__item {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// Widths
+// ------
+// Create our width classes, prefixed by the specified namespace.
+@mixin device-type($namespace: "") {
+    $prefix: $class-type + $namespace;
+
+    // Whole
+    #{$prefix}one-whole         { width: 100%; }
+
+
+    // Halves
+    #{$prefix}one-half          { width: 50%; }
+
+
+    // Thirds
+    #{$prefix}one-third         { width: 33.333%; }
+    #{$prefix}two-thirds        { width: 66.666%; }
+
+
+    // Quarters
+    #{$prefix}one-quarter       { width: 25%; }
+    #{$prefix}two-quarters      { @extend #{$prefix}one-half; }
+    #{$prefix}three-quarters    { width: 75%; }
+
+
+    // Fifths
+    #{$prefix}one-fifth         { width: 20%; }
+    #{$prefix}two-fifths        { width: 40%; }
+    #{$prefix}three-fifths      { width: 60%; }
+    #{$prefix}four-fifths       { width: 80%; }
+
+
+    // Sixths
+    #{$prefix}one-sixth         { width: 16.666%; }
+    #{$prefix}two-sixths        { @extend #{$prefix}one-third; }
+    #{$prefix}three-sixths      { @extend #{$prefix}one-half; }
+    #{$prefix}four-sixths       { @extend #{$prefix}two-thirds; }
+    #{$prefix}five-sixths       { width: 83.333%; }
+
+
+    // Eighths
+    #{$prefix}one-eighth        { width: 12.5%; }
+    #{$prefix}two-eighths       { @extend #{$prefix}one-quarter; }
+    #{$prefix}three-eighths     { width: 37.5%; }
+    #{$prefix}four-eighths      { @extend #{$prefix}one-half; }
+    #{$prefix}five-eighths      { width: 62.5%; }
+    #{$prefix}six-eighths       { @extend #{$prefix}three-quarters; }
+    #{$prefix}seven-eighths     { width: 87.5%; }
+
+
+    // Tenths
+    #{$prefix}one-tenth         { width: 10%; }
+    #{$prefix}two-tenths        { @extend #{$prefix}one-fifth; }
+    #{$prefix}three-tenths      { width: 30%; }
+    #{$prefix}four-tenths       { @extend #{$prefix}two-fifths; }
+    #{$prefix}five-tenths       { @extend #{$prefix}one-half; }
+    #{$prefix}six-tenths        { @extend #{$prefix}three-fifths; }
+    #{$prefix}seven-tenths      { width: 70%; }
+    #{$prefix}eight-tenths      { @extend #{$prefix}four-fifths; }
+    #{$prefix}nine-tenths       { width: 90%; }
+
+
+    // Twelfths
+    #{$prefix}one-twelfth       { width:8.333%; }
+    #{$prefix}two-twelfths      { @extend #{$prefix}one-sixth; }
+    #{$prefix}three-twelfths    { @extend #{$prefix}one-quarter; }
+    #{$prefix}four-twelfths     { @extend #{$prefix}one-third; }
+    #{$prefix}five-twelfths     { width: 41.666% }
+    #{$prefix}six-twelfths      { @extend #{$prefix}one-half; }
+    #{$prefix}seven-twelfths    { width: 58.333%; }
+    #{$prefix}eight-twelfths    { @extend #{$prefix}two-thirds; }
+    #{$prefix}nine-twelfths     { @extend #{$prefix}three-quarters; }
+    #{$prefix}ten-twelfths      { @extend #{$prefix}five-sixths; }
+    #{$prefix}eleven-twelfths   { width: 91.666%; }
+}
+
+@each $name in $breakpoint-has-widths {
+    @include grid-media-query($name) {
+       @include device-type('#{$name}--');
+    }
+}
+
+// Push
+// ----
+// Push classes, to move grid items over to the right by certain amounts.
+@mixin push-setup($namespace: "") {
+    $prefix: $class-type + "push--" + $namespace;
+
+     // Whole
+    #{$prefix}one-whole           { margin-left: 100%; }
+
+
+     // Halves
+    #{$prefix}one-half            { margin-left: 50%; }
+
+
+     // Thirds
+    #{$prefix}one-third           { margin-left: 33.333%; }
+    #{$prefix}two-thirds          { margin-left: 66.666%; }
+
+
+     // Quarters
+    #{$prefix}one-quarter         { margin-left: 25%; }
+    #{$prefix}two-quarters        { @extend #{$prefix}one-half; }
+    #{$prefix}three-quarters      { margin-left: 75%; }
+
+
+     // Fifths
+    #{$prefix}one-fifth           { margin-left: 20%; }
+    #{$prefix}two-fifths          { margin-left: 40%; }
+    #{$prefix}three-fifths        { margin-left: 60%; }
+    #{$prefix}four-fifths         { margin-left: 80%; }
+
+
+     // Sixths
+    #{$prefix}one-sixth           { margin-left: 16.666%; }
+    #{$prefix}two-sixths          { @extend #{$prefix}one-third; }
+    #{$prefix}three-sixths        { @extend #{$prefix}one-half; }
+    #{$prefix}four-sixths         { @extend #{$prefix}two-thirds; }
+    #{$prefix}five-sixths         { margin-left: 83.333%; }
+
+
+     // Eighths
+    #{$prefix}one-eighth          { margin-left: 12.5%; }
+    #{$prefix}two-eighths         { @extend #{$prefix}one-quarter; }
+    #{$prefix}three-eighths       { margin-left: 37.5%; }
+    #{$prefix}four-eighths        { @extend #{$prefix}one-half; }
+    #{$prefix}five-eighths        { margin-left: 62.5%; }
+    #{$prefix}six-eighths         { @extend #{$prefix}three-quarters; }
+    #{$prefix}seven-eighths       { margin-left: 87.5%; }
+
+
+     // Tenths
+    #{$prefix}one-tenth           { margin-left: 10%; }
+    #{$prefix}two-tenths          { @extend #{$prefix}one-fifth; }
+    #{$prefix}three-tenths        { margin-left: 30%; }
+    #{$prefix}four-tenths         { @extend #{$prefix}two-fifths; }
+    #{$prefix}five-tenths         { @extend #{$prefix}one-half; }
+    #{$prefix}six-tenths          { @extend #{$prefix}three-fifths; }
+    #{$prefix}seven-tenths        { margin-left: 70%; }
+    #{$prefix}eight-tenths        { @extend #{$prefix}four-fifths; }
+    #{$prefix}nine-tenths         { margin-left: 90%; }
+
+
+     // Twelfths
+    #{$prefix}one-twelfth         { margin-left: 8.333%; }
+    #{$prefix}two-twelfths        { @extend #{$prefix}one-sixth; }
+    #{$prefix}three-twelfths      { @extend #{$prefix}one-quarter; }
+    #{$prefix}four-twelfths       { @extend #{$prefix}one-third; }
+    #{$prefix}five-twelfths       { margin-left: 41.666%; }
+    #{$prefix}six-twelfths        { @extend #{$prefix}one-half; }
+    #{$prefix}seven-twelfths      { margin-left: 58.333%; }
+    #{$prefix}eight-twelfths      { @extend #{$prefix}two-thirds; }
+    #{$prefix}nine-twelfths       { @extend #{$prefix}three-quarters; }
+    #{$prefix}ten-twelfths        { @extend #{$prefix}five-sixths; }
+    #{$prefix}eleven-twelfths     { margin-left: 91.666%; }
+}
+
+@if $push {
+
+    @include push-setup;
+
+    @each $name in $breakpoint-has-push {
+        @include grid-media-query($name) {
+            @include push-setup('#{$name}--');
+        }
+    }
+
+}
+
+
+// Pull
+// Pull classes, to move grid items back to the left by certain amounts.
+@mixin pull-setup($namespace: "") {
+    $prefix: $class-type + "pull--" + $namespace;
+
+    // Whole
+    #{$prefix}one-whole           { margin-right:100%; }
+
+
+    // Halves
+    #{$prefix}one-half            { margin-right:50%; }
+
+
+    // Thirds
+    #{$prefix}one-third           { margin-right:33.333%; }
+    #{$prefix}two-thirds          { margin-right:66.666%; }
+
+
+    // Quarters
+    #{$prefix}one-quarter         { margin-right:25%; }
+    #{$prefix}two-quarters        { @extend #{$prefix}one-half; }
+    #{$prefix}three-quarters      { margin-right:75%; }
+
+
+    // Fifths
+    #{$prefix}one-fifth           { margin-right:20%; }
+    #{$prefix}two-fifths          { margin-right:40%; }
+    #{$prefix}three-fifths        { margin-right:60%; }
+    #{$prefix}four-fifths         { margin-right:80%; }
+
+
+    // Sixths
+    #{$prefix}one-sixth           { margin-right:16.666%; }
+    #{$prefix}two-sixths          { @extend #{$prefix}one-third; }
+    #{$prefix}three-sixths        { @extend #{$prefix}one-half; }
+    #{$prefix}four-sixths         { @extend #{$prefix}two-thirds; }
+    #{$prefix}five-sixths         { margin-right:83.333%; }
+
+
+    // Eighths
+    #{$prefix}one-eighth          { margin-right:12.5%; }
+    #{$prefix}two-eighths         { @extend #{$prefix}one-quarter; }
+    #{$prefix}three-eighths       { margin-right:37.5%; }
+    #{$prefix}four-eighths        { @extend #{$prefix}one-half; }
+    #{$prefix}five-eighths        { margin-right:62.5%; }
+    #{$prefix}six-eighths         { @extend #{$prefix}three-quarters; }
+    #{$prefix}seven-eighths       { margin-right:87.5%; }
+
+
+    // Tenths
+    #{$prefix}one-tenth           { margin-right:10%; }
+    #{$prefix}two-tenths          { @extend #{$prefix}one-fifth; }
+    #{$prefix}three-tenths        { margin-right:30%; }
+    #{$prefix}four-tenths         { @extend #{$prefix}two-fifths; }
+    #{$prefix}five-tenths         { @extend #{$prefix}one-half; }
+    #{$prefix}six-tenths          { @extend #{$prefix}three-fifths; }
+    #{$prefix}seven-tenths        { margin-right:70%; }
+    #{$prefix}eight-tenths        { @extend #{$prefix}four-fifths; }
+    #{$prefix}nine-tenths         { margin-right:90%; }
+
+
+    // Twelfths
+    #{$prefix}one-twelfth         { margin-right:8.333%; }
+    #{$prefix}two-twelfths        { @extend #{$prefix}one-sixth; }
+    #{$prefix}three-twelfths      { @extend #{$prefix}one-quarter; }
+    #{$prefix}four-twelfths       { @extend #{$prefix}one-third; }
+    #{$prefix}five-twelfths       { margin-right:41.666%; }
+    #{$prefix}six-twelfths        { @extend #{$prefix}one-half; }
+    #{$prefix}seven-twelfths      { margin-right:58.333%; }
+    #{$prefix}eight-twelfths      { @extend #{$prefix}two-thirds; }
+    #{$prefix}nine-twelfths       { @extend #{$prefix}three-quarters; }
+    #{$prefix}ten-twelfths        { @extend #{$prefix}five-sixths; }
+    #{$prefix}eleven-twelfths     { margin-right:91.666%; }
+}
+
+@if $pull {
+
+    @include pull-setup;
+
+    @each $name in $breakpoint-has-pull {
+        @include grid-media-query($name) {
+            @include pull-setup('#{$name}--');
+        }
+    }
+
+}

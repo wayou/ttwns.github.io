@@ -1,0 +1,53 @@
+//
+// Buttons
+// =======
+
+button,
+.btn {
+    @include rem(padding, $baseline/4 $baseline/1.5);
+    @include font-smoothing(on);
+    border: 1px solid;
+    border-radius: 3px;
+    margin: 0;
+    appearance: none;
+    font-family: $sans-serif;
+    font-weight: 600;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.btn--round {
+    @include rem(border-radius, $baseline);
+}
+
+@each $accent-color, $color in $accent-colors {
+    .btn--outline-#{$accent-color} {
+        background: none;
+        color: $color;
+
+        &:hover {
+            background-color: #{$color};
+            color: $white;
+        }
+    }
+
+    .btn--real-#{$accent-color} {
+        @include gradient-vertical(lighten($color, 20%), $color);
+        border-color: darken($color, 5%);
+        background-color: $color;
+        box-shadow: 0 2px 3px rgba(48, 48, 48, .5), inset 0 2px 1px rgba(255, 255, 255, .5);
+        color: dark-or-light($color);
+
+        &:hover,
+        &:focus {
+            background-image: none;
+        }
+
+        &:active {
+            @include gradient-vertical($color, lighten($color, 20%));
+            box-shadow: inset 0 2px 3px rgba(48, 48, 48, .5);
+        }
+    }
+}

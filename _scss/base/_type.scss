@@ -1,0 +1,66 @@
+//
+// Typography
+// ==========
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $sans-serif;
+}
+
+h1 {
+    @include rem(line-height, $baseline * 2);
+    @include rem(margin, 0 0 $baseline);
+    font-size: ms(4);
+}
+
+h2 {
+    @include rem(line-height, $baseline * 2);
+    @include rem(margin, 0 0 $baseline);
+    font-size: ms(3);
+}
+
+h3 {
+    @include rem(line-height, $baseline);
+    @include rem(margin, 0 0 $baseline);
+    font-size: ms(2);
+}
+
+h4 {
+    @include rem(line-height, $baseline);
+    @include rem(margin, 0 0 $baseline);
+    font-size: ms(1);
+}
+
+// Body text
+p {
+    @include rem(margin, 0 0 $baseline);
+}
+
+// Lists
+ol,
+ul {
+    @include rem(margin, 0 0 $baseline);
+    padding-left: 0;
+}
+
+// Remove the dots after numerals
+ol {
+    list-style-type: none;
+    counter-reset: numeral-only;
+
+    > li {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -1em;
+            content: counters(numeral-only, ' ') ' ';
+            counter-increment: numeral-only;
+        }
+    }
+}

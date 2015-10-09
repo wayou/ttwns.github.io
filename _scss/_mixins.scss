@@ -1,4 +1,4 @@
-// scss-lint:disable VendorPrefix
+// scss-lint:disable VendorPrefix, ColorVariable, NameFormat
 @import 'variables';
 @import 'functions';
 
@@ -8,18 +8,22 @@
     filter: alpha(opacity=($opacity * 100));
 }
 
-// Px/Rem converter
+// Rem/px converter
 // ----------------
-// Convert `px` to `rem` and provide pixel font size fallback for IE8
+// Convert `rem` to `px` and provide pixel font size fallback for IE8
 // Features:
-//  1. Accepts either `px` or `rem` as an input value
-//  2. Accepts (almost) any property as an input, not only `font-size`
-//  3. Accepts multiple values, like 10px 20px
+//  1. Accepts (almost) any property as an input, not only `font-size`
+//  2. Accepts multiple values, like 10px 20px
+//
+// Note:
+// Define `$font-size-base-old-ie` in pixels first in your variables
 //
 // Source: http://hugogiraudel.com/2013/03/18/ultimate-rem-mixin/
 @mixin rem($property, $values) {
     $px : ();
     $rem: ();
+    $old-ie: false !default;
+    $font-size-base-old-ie: 16px !default;
 
     @each $value in $values {
 
@@ -30,13 +34,8 @@
             $unit: unit($value);
             $val: parse-int($value);
 
-            @if $unit == 'px' {
-                $px : append($px, $value);
-                $rem: append($rem, ($val / 16 + rem));
-            }
-
             @if $unit == 'rem' {
-                $px : append($px, ($val * 16 + px));
+                $px : append($px, ($val * parse-int($font-size-base-old-ie) + px));
                 $rem: append($rem, $value);
             }
         }
@@ -45,8 +44,11 @@
     @if $px == $rem {
         #{$property}: $px;
     } @else {
-        #{$property}: $px;
-        #{$property}: $rem;
+        @if $old-ie {
+            #{$property}: $px;
+        } @else {
+            #{$property}: $rem;
+        }
     }
 }
 
@@ -66,6 +68,27 @@
     }
 }
 
+// Gradients
+// =========
+
+// Vertical gradient
+// -----------------
+// Two-stop vertical gradient with old IE fallback
+@mixin gradient-vertical($start-color: #eee, $end-color: #ddd) {
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie_hex_str($start-color)}', endColorstr='#{ie_hex_str($end-color)}',GradientType=0);
+    background-image: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+}
+
+// Horizontal gradient
+// -----------------
+// Two-stop horizontal gradient with old IE fallback
+@mixin gradient-horizontal($start-color: #eee, $end-color: #ddd) {
+    background-repeat: repeat-y;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie_hex_str($start-color)}', endColorstr='#{ie_hex_str($end-color)}',GradientType=1);
+    background-image: linear-gradient(to right, $start-color 0%, $end-color 100%);
+}
+
 // Linear gradient
 // ---------------
 // Specify gradient direction either using angles or keywords (old or new syntax)
@@ -75,7 +98,7 @@
 // The `convert-keywords-to-angles()` function is used to fix the issue that
 // the gradient angle of prefixed middle syntax differs from that of the unprefixed new syntax.
 // Ref: http://www.quirksmode.org/css/images/angles.html
-@mixin gradient-directional($start-color: #555, $end-color: #333, $stddeg: 45deg) {
+@mixin gradient-directional($start-color: $gray, $end-color: $gray-dark, $stddeg: 45deg) {
     @if type-of($stddeg) != number {
         $stddeg: convert-keywords-to-angles($stddeg);
     }
@@ -112,7 +135,7 @@
 //  1. Old IE needs another stylesheet like:
 //     `<!--[if lt IE 9]><link rel="stylesheet" href="css/old-ie.css"><![endif]-->`
 //  2. Define breakpoints in variables using SASS maps
-//  3. Declare the screen width you want old IE to display in `fix-queries-at`
+//  3. Declare the screen width you want old IE to display in `fix-queries-at` in `px`
 // Ref:
 //  http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 //  http://jakearchibald.github.io/sass-ie/
@@ -129,9 +152,20 @@
                 @content;
             }
         } @else {
-            @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+            @warn 'Unfortunately, no value could be retrieved from `#{$screen-width}`. '
                 + 'Please make sure it is defined in `$breakpoints` map.';
         }
+    }
+}
+
+@mixin between($screen-width-min, $screen-width-max) {
+    @if map-has-key($breakpoints, $screen-width-min) and map-has-key($breakpoints, $screen-width-max) {
+        @media only screen and (min-width: map-get($breakpoints, $screen-width-min)) and (max-width: map-get($breakpoints, $screen-width-max)) {
+            @content;
+        }
+    } @else {
+        @warn 'Unfortunately, no value could be retrieved from `#{$screen-width-min}` or `#{$screen-width-max}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
 
@@ -141,7 +175,7 @@
             @content;
         }
     } @else {
-        @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+        @warn 'Unfortunately, no value could be retrieved from `#{$screen-width}`. '
             + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }

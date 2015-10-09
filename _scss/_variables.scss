@@ -1,0 +1,50 @@
+// Colors
+$white: #fff;
+$gray-lightest: #f7f7f7;
+$gray-lighter: #eee;
+$gray-light: #ccc;
+$gray: #999;
+$gray-dark: #666;
+$gray-darker: #333;
+$black: #000;
+
+$accent-colors: (
+    'green': #4caf50,
+    'yellow-light': #f8e71c,
+    'yellow-dark': #ffc108,
+    'orange': #f08406
+);
+
+$text-highlight: #fcf38e; // used on emphasis like text selection
+
+$text-color: #333;
+
+$code-inline: #900;
+
+// Fonts
+$serif: Calluna, 'Hoefler Text', Palatino, Garamond, 'Times New Roman', serif;
+$sans-serif: 'myriad-pro', Calibri, 'Lucida Grande', 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+$mono: menlo, 'Source Code Pro', Consolas, Courier, monospace;
+
+// Modular Scale & Vertical Rhythm
+$font-size-base: 18px;
+$font-size-base-for-desk: 22px;
+$font-size-base-old-ie: $font-size-base-for-desk;
+$baseline: 1.5rem;
+
+// Grid
+$gutter: $baseline / 3;
+$push:   true;
+$pull:   true;
+
+$breakpoints: (
+    palm: 480px,
+    lap: 768px,
+    portable: 1023px,
+    desk: 1366px
+);
+
+$page-margin: $baseline;
+
+$old-ie: false !default;
+$fix-queries-at: 960px !default;

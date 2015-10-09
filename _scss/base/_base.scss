@@ -18,13 +18,19 @@
 }
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    color: $text-color;
+    font-size: $font-size-base;
+    line-height: 1.5;
+
+    @include at-least(desk) {
+        font-size: $font-size-base-for-desk;
+    }
+
 }
 
 body {
     font-family: $serif;
+    font-size: ms(0);
 }
 
 // Remove text-shadow in selection highlight:
@@ -33,8 +39,12 @@ body {
 // These selection rule sets have to be separate.
 // Customize the background color to match your design.
 ::selection {
-    background: #b3d4fc;
+    background: $text-highlight;
     text-shadow: none;
+}
+
+mark {
+    background: $text-highlight;
 }
 
 // A better looking default horizontal rule
@@ -43,7 +53,7 @@ hr {
     height: 1px;
     padding: 0;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $gray-light;
     margin: 1em 0;
 }
 
@@ -59,13 +69,6 @@ video {
     vertical-align: middle;
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: $mono;
-}
-
 // Remove default fieldset styles.
 fieldset {
     padding: 0;
@@ -77,10 +80,5 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
-//
-// Author's custom styles
-// ======================
-
 
 

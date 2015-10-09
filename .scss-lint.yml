@@ -1,9 +1,8 @@
 scss_files: '_scss/**/*.scss'
 
 exclude:
-    - _scss/functions.scss
-    - _scss/base/grid.scss
-    - _scss/base/poole.scss
+    - _scss/_functions.scss
+    - _scss/base/_grid.scss
     - _scss/dependencies/vendor/*.scss
 
 linters:
@@ -359,7 +358,7 @@ linters:
         severity: error
 
     VariableForProperty:
-        enabled: true
+        enabled: false
         properties:
             - color
             - font
