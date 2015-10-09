@@ -32,4 +32,22 @@ button,
             color: $white;
         }
     }
+
+    .btn--real-#{$accent-color} {
+        @include gradient-vertical(lighten($color, 20%), $color);
+        border-color: darken($color, 5%);
+        background-color: $color;
+        box-shadow: 0 2px 3px rgba(48, 48, 48, .5), inset 0 2px 1px rgba(255, 255, 255, .5);
+        color: dark-or-light($color);
+
+        &:hover,
+        &:focus {
+            background-image: none;
+        }
+
+        &:active {
+            @include gradient-vertical($color, lighten($color, 20%));
+            box-shadow: inset 0 2px 3px rgba(48, 48, 48, .5);
+        }
+    }
 }
