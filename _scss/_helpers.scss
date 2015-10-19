@@ -70,3 +70,10 @@
     display: none !important;
 }
 
+// Strip default style
+.styless {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    appearance: none;
+}
