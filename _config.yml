@@ -27,3 +27,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Serving
+host: 0.0.0.0

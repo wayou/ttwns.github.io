@@ -310,6 +310,7 @@ linters:
 
     SelectorFormat:
         severity: error
+        convention: hyphenated_BEM
 
     Shorthand:
         severity: error
