@@ -1,0 +1,12 @@
+header {
+    @include rem(height, $baseline * 2);
+    @include rem(padding, 0 ($baseline * 2 / 3));
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid $gray-light;
+}
+
+.logo {
+    width: 100%;
+}
+
