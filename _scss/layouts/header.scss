@@ -1,6 +1,9 @@
 header {
     @include rem(height, $baseline * 2);
     @include rem(padding, 0 ($baseline * 2 / 3));
+    position: fixed;
+    top: 0;
+    left: 0;
     display: table;
     width: 100%;
     border-bottom: 1px solid $gray-light;
