@@ -12,8 +12,8 @@ header {
 
 .logo,
 .menu-btn {
-    line-height: parse-int($baseline) * 2;
     display: table-cell;
+    line-height: parse-int($baseline) * 2;
 }
 
 .menu-btn {
