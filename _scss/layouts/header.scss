@@ -12,7 +12,7 @@ header {
 
 .logo,
 .menu-btn {
-    @include rem(line-height, $baseline * 2);
+    line-height: parse-int($baseline) * 2;
     display: table-cell;
 }
 
