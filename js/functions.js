@@ -1,3 +1,5 @@
+var menuBtn = document.getElementById('menu-btn');
+
 function toggleVisibility(id) {
     var e = document.getElementById(id);
     if (e.classList) {
@@ -17,4 +19,14 @@ function toggleVisibility(id) {
 
         e.className = classes.join(' ');
     }
+}
+
+if (menuBtn.addEventListener) {
+    menuBtn.addEventListener('click', function(){
+        toggleVisibility('main-nav');
+    }, false);
+} else {
+    menuBtn.attachEvent('onclick', function(){
+        toggleVisibility('main-nav');
+    });
 }
