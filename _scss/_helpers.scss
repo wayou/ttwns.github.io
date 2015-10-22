@@ -65,9 +65,24 @@
     visibility: hidden;
 }
 
+.visible {
+    visibility: visible;
+}
+
 // Hide visually and from screen readers:
 .hidden {
     display: none !important;
+}
+
+// Hide visually
+.transparent {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.opaque {
+    opacity: 1;
+    filter: alpha(opacity=1);
 }
 
 // Strip default style
