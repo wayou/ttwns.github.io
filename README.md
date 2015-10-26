@@ -34,6 +34,13 @@ gem install overcommit scss_lint html-proofer
 $ guard
 ```
 
+## Development with Docker
+
+```sh
+docker build -t ttwns-blog .
+docker run --rm --volume=$(pwd):/usr/src/app -it -p 4000:4000 ttwns-blog
+```
+
 ## License
 
 The content of this project itself is licensed under the
