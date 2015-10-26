@@ -37,9 +37,11 @@ function toggleDisplay(hideThisEl, displayThisEl) {
 if (menuBtn.addEventListener) {
     menuBtn.addEventListener('click', function(){
         toggleVisibility('main-nav');
+        toggleDisplay('iconic-menu', 'iconic-x');
     }, false);
 } else {
     menuBtn.attachEvent('onclick', function(){
         toggleVisibility('main-nav');
+        toggleDisplay('iconic-menu', 'iconic-x');
     });
 }
