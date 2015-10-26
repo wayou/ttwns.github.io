@@ -21,6 +21,19 @@ function toggleVisibility(id) {
     }
 }
 
+function toggleDisplay(hideThisEl, displayThisEl) {
+    var hideThisEl = document.getElementById(hideThisEl) || null;
+        displayThisEl = document.getElementById(displayThisEl) || null;
+
+    if (hideThisEl) {
+        hideThisEl.style.display = hideThisEl.style.display == '' ? 'none' : '';
+    }
+    if (displayThisEl) {
+        displayThisEl.style.display = displayThisEl.style.display == 'none' ? '' : 'none';
+    }
+}
+
+
 if (menuBtn.addEventListener) {
     menuBtn.addEventListener('click', function(){
         toggleVisibility('main-nav');
