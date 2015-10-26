@@ -32,11 +32,6 @@
 // ==================
 
 
-// Hide visually and from screen readers:
-.hidden {
-    display: none !important;
-}
-
 // Hide only visually, but have it available for screen readers:
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 .sr-only {
@@ -68,4 +63,32 @@
 // Hide visually and from screen readers, but maintain layout
 .invisible {
     visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+// Hide visually and from screen readers:
+.hidden {
+    display: none !important;
+}
+
+// Hide visually
+.transparent {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.opaque {
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+
+// Strip default style
+.styless {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    appearance: none;
 }
