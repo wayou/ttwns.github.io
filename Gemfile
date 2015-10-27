@@ -8,6 +8,8 @@ gem 'guard'
 gem 'guard-jekyll-plus'
 gem 'guard-livereload'
 gem 'rouge'
+gem 'jekyll-stitch-plus'
+gem 'uglifier'
 
 gem 'octopress-hooks'
 gem 'autoprefixer-rails'
