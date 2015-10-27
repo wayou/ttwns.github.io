@@ -1,3 +1,6 @@
+# For jekyll-stitch-plus(uglify js or not)
+env: 'development'
+
 # Dependencies
 markdown:         redcarpet
 highlighter:      rouge
@@ -19,6 +22,12 @@ paginate:         1
 sass:
   sass_dir:       _scss
   style:          :compressed
+
+stitch:
+  dependencies:
+    - 'js/iconic.min.js'
+    - 'js/functions.js'
+  output: 'js/main.js'
 
 # Defaults
 defaults:
