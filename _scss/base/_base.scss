@@ -29,6 +29,7 @@ html {
 }
 
 body {
+    @include rem(padding-top, $baseline * 2);
     font-family: $serif;
     font-size: ms(0);
 }
