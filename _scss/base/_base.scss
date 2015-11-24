@@ -20,7 +20,6 @@
 html {
     color: $text-color;
     font-size: $font-size-base;
-    line-height: 1.5;
 
     @include at-least(desk) {
         font-size: $font-size-base-for-desk;
@@ -30,6 +29,7 @@ html {
 
 body {
     @include rem(padding-top, $baseline * 2);
+    @include rem(line-height, $baseline);
     font-family: $serif;
     font-size: ms(0);
 }
