@@ -3,16 +3,33 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-    {% for post in paginator.posts %}
-    <div class="post">
-        <span class="post__date">{{ post.date | date_to_string }}</span>
-        <h1 class="post__title">
-            <a href="{{ post.url }}">
-            {{ post.title }}
-            </a>
-        </h1>
-        {{ post.excerpt }}
+<div class="home">
+    <div class="grid grid--full">
+        <div class="grid__item portable--one-half">
+        </div>
+
+        <div class="grid__item portable--one-half">
+            <div class="grid grid--full">
+                <div class="grid__item lap--eight-twelfths portable--one-whole">
+                    <div class="posts">
+                        {% for post in paginator.posts %}
+                        <div class="post">
+                            <span class="post__date">{{ post.date | date: "%m.%d.%Y" }}</span>
+                            <h1 class="post__title">
+                                <a href="{{ post.url }}">
+                                {{ post.title }}
+                                </a>
+                            </h1>
+                            {{ post.excerpt }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="grid__item lap--four-twelfths portable--one-whole">
+                </div>
+            </div>
+
+        </div>
     </div>
-    {% endfor %}
 </div>
