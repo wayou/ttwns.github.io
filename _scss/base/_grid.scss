@@ -78,6 +78,7 @@ $class-type: if($use-silent-classes, unquote("%"), unquote("."));
 // 2. Prevent empty grid items from stacking on top of each other.
 // 3. Space columns apart.
 #{$class-type}grid__item {
+    width: 100%;
     float: left;              // [1]
     min-height: 1px;          // [2]
     padding-right: $gutter;   // [3]
