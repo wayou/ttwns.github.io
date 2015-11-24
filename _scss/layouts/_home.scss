@@ -7,6 +7,14 @@
     }
 }
 
+.home__more-articles {
+    @include rem(margin-bottom, 3rem);
+
+    > button {
+        @include rem(margin-bottom, 1rem);
+    }
+}
+
 .categories {
     @extend %clearfix;
 }
