@@ -1,0 +1,27 @@
+.posts {
+    @include rem(margin-top, 3rem);
+}
+
+.post {
+    @include rem(padding, 0 1rem 3rem);
+}
+
+.post__date {
+    vertical-align: top;
+    font-size: ms(-1);
+}
+
+.post__title {
+    @include rem(line-height, 1.5rem);
+    font-size: ms(1);
+    font-weight: 400;
+
+    > a {
+        color: $gray-darker;
+    }
+}
+
+.post__author {
+    font-family: $sans-serif;
+    font-size: ms(-1);
+}
