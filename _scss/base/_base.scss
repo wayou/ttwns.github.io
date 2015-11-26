@@ -82,4 +82,7 @@ textarea {
     resize: vertical;
 }
 
-
+a {
+    color: map-get($accent-colors, 'blue-dark');
+    text-decoration: none;
+}
