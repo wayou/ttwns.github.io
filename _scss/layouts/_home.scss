@@ -2,8 +2,24 @@
 // ========
 
 .home {
+
+    .posts {
+        @include rem(margin-top, 3rem);
+    }
+
+    .posts,
     .categories {
         @include rem(padding, 0 1rem);
+
+        @include at-least(lap) {
+            @include rem(padding, 0 2rem);
+        }
+    }
+
+    .categories {
+        @include between(hands, lap) {
+            @include rem(margin-top, 3rem);
+        }
     }
 }
 
@@ -11,7 +27,9 @@
     @include rem(margin-bottom, 3rem);
 
     > button {
-        @include rem(margin-bottom, 1rem);
+        // scss-lint:disable DuplicateProperty
+        margin: (1.5 * $font-size-base-for-desk / 4) - 2px 0;
+        margin: calc(#{$baseline}/4 - 2px) 0;
     }
 }
 
@@ -20,7 +38,7 @@
 }
 
 .categories__title {
-    @include rem(margin-bottom, 1rem);
+    @include rem(margin-bottom, $baseline);
     font-size: ms(0);
 }
 

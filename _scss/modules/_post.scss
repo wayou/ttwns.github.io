@@ -1,9 +1,7 @@
-.posts {
-    @include rem(margin-top, 3rem);
+.post {
+    @include rem(padding, 0 0 3rem);
 }
 
-.post {
-    @include rem(padding, 0 1rem 3rem);
 }
 
 .post__date {
