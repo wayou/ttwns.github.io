@@ -5,12 +5,12 @@ title: Home
 
 <div class="home">
     <div class="grid grid--full">
-        <div class="grid__item portable--one-half">
+        <div class="grid__item lap--one-half">
         </div>
 
-        <div class="grid__item portable--one-half">
+        <div class="grid__item lap--one-half">
             <div class="grid grid--full">
-                <div class="grid__item lap--eight-twelfths portable--one-whole">
+                <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <div class="posts">
                         {% for post in paginator.posts %}
                         <div class="post">
@@ -33,7 +33,7 @@ title: Home
 
                 </div>
 
-                <div class="grid__item lap--four-twelfths portable--one-whole">
+                <div class="grid__item hands--four-twelfths lap--one-whole">
                     <div class="categories">
                         <h2 class="categories__title">Categories</h2>
                         <ul class="styless-list">
@@ -50,7 +50,7 @@ title: Home
             </div>
 
             <div class="grid grid--full">
-                <div class="grid__item lap--eight-twelfths portable--one-whole">
+                <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <footer class="footer text-centered">
                         &copy;2012 - {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
                     </footer>

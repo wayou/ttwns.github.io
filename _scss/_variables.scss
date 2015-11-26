@@ -43,9 +43,9 @@ $pull:   true;
 
 $breakpoints: (
     palm: 480px,
-    lap: 768px,
-    portable: 1023px,
-    desk: 1366px
+    hands: 768px,
+    lap: 1280px,
+    desk: 1920px
 );
 
 $page-margin: $baseline;
