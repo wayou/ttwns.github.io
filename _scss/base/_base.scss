@@ -21,6 +21,10 @@ html {
     color: $text-color;
     font-size: $font-size-base;
 
+    @include at-least(lap) {
+        font-size: $font-size-base-for-lap;
+    }
+
     @include at-least(desk) {
         font-size: $font-size-base-for-desk;
     }

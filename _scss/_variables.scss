@@ -33,8 +33,9 @@ $mono: menlo, 'Source Code Pro', Consolas, Courier, monospace;
 
 // Modular Scale & Vertical Rhythm
 $font-size-base: 18px;
+$font-size-base-for-lap: 20px;
 $font-size-base-for-desk: 22px;
-$font-size-base-old-ie: $font-size-base;
+$font-size-base-old-ie: $font-size-base-for-lap;
 $baseline: 1.5rem;
 
 // Grid
