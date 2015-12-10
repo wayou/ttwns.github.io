@@ -1,0 +1,83 @@
+// Homapage
+// ========
+
+.home {
+
+    .posts {
+        @include rem(margin-top, 3rem);
+    }
+
+    .posts,
+    .categories {
+        @include rem(padding, 0 1rem);
+
+        @include at-least(lap) {
+            @include rem(padding, 0 2rem);
+        }
+    }
+
+    .categories {
+        @include between(hands, lap) {
+            @include rem(margin-top, 3rem);
+        }
+    }
+}
+
+.home__more-articles {
+    @include rem(margin-bottom, 3rem);
+
+    > button {
+        // scss-lint:disable DuplicateProperty
+        margin: (1.5 * $font-size-base-for-desk / 4) - 2px 0;
+        margin: calc(#{$baseline}/4 - 2px) 0;
+    }
+}
+
+.categories {
+    @extend %clearfix;
+}
+
+.categories__title {
+    @include rem(margin-bottom, $baseline);
+    font-size: ms(0);
+}
+
+.categories__pill {
+    // scss-lint:disable DuplicateProperty
+    @include rem(line-height, 1rem);
+    float: left;
+    border: 1px solid $gray-light;
+    border-radius: 4px;
+    margin: 0 6px 5px 0;
+    margin: 0 6px calc(.5rem - 2px) 0;
+    color: $gray;
+    font-family: $sans-serif;
+    font-size: ms(-2);
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        border-color: $gray;
+        background-color: $gray;
+        color: $white;
+    }
+
+    > a {
+        display: inline-block;
+        padding: 0 6px;
+
+        &,
+        &:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+
+.footer {
+    @include rem(margin-top, 3rem);
+    font-family: $sans-serif;
+    font-size: ms(-3);
+}

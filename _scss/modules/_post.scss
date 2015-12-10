@@ -1,0 +1,62 @@
+.post {
+    @include rem(padding, 0 0 3rem);
+}
+
+.post--featured {
+    position: relative;
+    overflow-x: hidden;
+    min-height: $baseline * 17;
+    background-size: cover;
+
+    @include at-least(lap) {
+        @include rem(padding-top, 3rem);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .post__meta {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .post__meta-content {
+        @include rem(padding, 1.5rem 1rem);
+        position: relative;
+        z-index: 1;
+    }
+
+    .post__title {
+        @include rem(margin-bottom, 0);
+    }
+
+    .post__title > a,
+    .post__author {
+        color: $white;
+    }
+}
+
+.post__date {
+    vertical-align: top;
+    font-size: ms(-1);
+}
+
+.post__title {
+    @include rem(line-height, 1.5rem);
+    font-size: ms(1);
+    font-weight: 400;
+
+    > a {
+        color: $gray-darker;
+    }
+}
+
+.post__author {
+    font-family: $sans-serif;
+    font-size: ms(-1);
+}

@@ -20,7 +20,10 @@
 html {
     color: $text-color;
     font-size: $font-size-base;
-    line-height: 1.5;
+
+    @include at-least(lap) {
+        font-size: $font-size-base-for-lap;
+    }
 
     @include at-least(desk) {
         font-size: $font-size-base-for-desk;
@@ -29,6 +32,8 @@ html {
 }
 
 body {
+    @include rem(padding-top, $baseline * 2);
+    @include rem(line-height, $baseline);
     font-family: $serif;
     font-size: ms(0);
 }
@@ -81,4 +86,7 @@ textarea {
     resize: vertical;
 }
 
-
+a {
+    color: map-get($accent-colors, 'blue-dark');
+    text-decoration: none;
+}
