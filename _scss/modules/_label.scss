@@ -1,0 +1,19 @@
+.label {
+    @include rem(margin-bottom, 2rem);
+    @include rem(line-height, 1rem);
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 4px;
+    vertical-align: bottom;
+    color: $gray-darkest;
+    font-family: $sans-serif;
+    font-size: ms(-3);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@each $accent-color, $color in $accent-colors {
+    .label--#{$accent-color} {
+        background: $color;
+    }
+}
