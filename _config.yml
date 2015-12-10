@@ -16,7 +16,7 @@ url:              http://blog.ttwns.tw
 
 google_analytics_id: UA-35010205-2
 
-paginate:         1
+paginate:         5
 
 # Assets
 sass:
