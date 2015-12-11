@@ -3,21 +3,20 @@
 <!--[if IE 9]>      <html class="ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 
-  {% include head.html %}
+    {% include '_partial/head.swig' %}
 
-  <body>
+    <body>
 
-    {% include header.html %}
+    {% include '_partial/header.swig' %}
 
     <nav class="main-nav" id="main-nav">
     </nav>
     <div class="content">
-
-      {{ content }}
-
+        {% block content %}{% endblock %}
     </div>
 
-    {% include analytics.html %}
-    {% stitch_js_tag %}
+    {% include '_partial/analytics.swig' %}
+    {{ js('js/iconic.min.js') }}
+    {{ js('js/functions.js') }}
   </body>
 </html>

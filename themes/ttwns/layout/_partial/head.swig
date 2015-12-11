@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {% if is_home() %}
+      {{ config.title }} &middot; {{ config.subtitle }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {{ page.title }} &middot; {{ config.title }}
     {% endif %}
   </title>
   <meta name="description" content="
-    {% if page.title == "Home" %}
-      {{ site.description }}
+    {% if is_home() %}
+      {{ config.description }}
     {% else %}
-      {{ post.excerpt | strip_html }}
+      {{ post.excerpt }}
     {% endif %}"
   >
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,14 +22,13 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!--[if lte IE 9]>
-    <script src="/js/html5shiv-printshiv.min.js"></script>
+    {{ js('js/html5shiv-printshiv.min.js') }}
   <![endif]-->
   <!--[if lte IE 8]>
-    <link rel="stylesheet" href="/css/old-ie.css">
+    {{ css('css/old-ie.css') }}
   <![endif]-->
   <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="/css/styles.css">
-    <!-- <link rel="stylesheet" href="http://basehold.it/33"> -->
+    {{ css('css/styles.css') }}
   <!--<![endif]-->
 
   <!-- Icons -->
@@ -37,7 +36,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
   <script src="//use.typekit.net/bdb4mgk.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>

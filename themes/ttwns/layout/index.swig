@@ -1,13 +1,11 @@
----
-layout: default
-title: Home
----
+{% extends 'default.swig' %}
 
+{% block content %}
 <div class="home">
     <div class="grid grid--full">
         <div class="grid__item lap--one-half">
-            {% assign featuredPosts = site.posts | where:"featured", true %}
-            {% for post in featuredPosts limit:1 %}
+            {% for post in site.posts %}
+            {% if post.featured %}
             <div class="post post--featured">
                 <div class="post__meta">
                     <div class="post__meta-content">
@@ -21,6 +19,7 @@ title: Home
                     </div>
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
 
@@ -28,11 +27,11 @@ title: Home
             <div class="grid grid--full">
                 <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <div class="posts">
-                        {% for post in paginator.posts %}
+                        {% for post in page.posts %}
                         <div class="post">
-                            <span class="post__date">{{ post.date | date: "%m.%d.%Y" }}</span>
+                            <span class="post__date">{{ post.date | date("m.d.Y") }}</span>
                             <h1 class="post__title">
-                                <a href="{{ post.url }}">
+                                <a href="{{ post.path }}">
                                 {{ post.title }}
                                 </a>
                             </h1>
@@ -53,7 +52,7 @@ title: Home
                     <div class="categories">
                         <h2 class="categories__title">Categories</h2>
                         <ul class="styless-list">
-                        {% for category in site.data.categories %}
+                        {% for category in site.categories %}
                             <li class="categories__pill">
                                 <a href="">
                                     {{ category.name }}
@@ -68,10 +67,11 @@ title: Home
             <div class="grid grid--full">
                 <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <footer class="footer text-centered">
-                        &copy;2012 - {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.
+                        &copy;2012 - {{ Date() | date('Y') }} {{ site.title }}. All rights reserved.
                     </footer>
                 </div>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
