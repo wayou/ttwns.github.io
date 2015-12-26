@@ -67,7 +67,7 @@
             <div class="grid grid--full">
                 <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <footer class="footer text-centered">
-                        &copy;2012 - {{ Date() | date('Y') }} {{ site.title }}. All rights reserved.
+                        &copy;2012 - {{ Date() | date('Y') }} {{ config.title }}. All rights reserved.
                     </footer>
                 </div>
             </div>
