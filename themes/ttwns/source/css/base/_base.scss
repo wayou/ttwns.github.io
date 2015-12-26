@@ -34,6 +34,7 @@ html {
 body {
     @include rem(padding-top, $baseline * 2);
     @include rem(line-height, $baseline);
+    @include font-smoothing(on);
     font-family: $serif;
     font-size: ms(0);
 }
