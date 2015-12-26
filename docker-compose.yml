@@ -1,0 +1,10 @@
+blog:
+  build: .
+  ports:
+    - "4000:4000"
+  volumes:
+    - .:/blog
+  working_dir: /blog
+  tty: true
+  command: bash
+  # command: hexo server

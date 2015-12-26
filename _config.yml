@@ -1,41 +1,21 @@
-# For jekyll-stitch-plus(uglify js or not)
-env: 'development'
-
-# Dependencies
-markdown:         redcarpet
-highlighter:      rouge
-
-# Permalinks
-permalink:        pretty
-
-# Setup
+# Site
 title:            The Traveling Twins
-tagline:          The Blog
+subtitle:         The Blog
 description:      Blog for The Traveling Twins
 url:              http://blog.ttwns.tw
 
-google_analytics_id: UA-35010205-2
+# Writing
+new_post_name: :year-:month-:day-:title.md
+post_asset_folder: true
 
-paginate:         5
+# Pagination
+per_page: 5
 
-# Assets
-sass:
-  sass_dir:       _scss
-  style:          :compressed
+# Extensions
+theme: ttwns
 
-stitch:
-  dependencies:
-    - 'js/iconic.min.js'
-    - 'js/functions.js'
-  output: 'js/main.js'
-
-# Defaults
-defaults:
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-
-# Serving
-host: 0.0.0.0
+# SASS
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false

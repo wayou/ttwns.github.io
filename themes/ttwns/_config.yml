@@ -1,0 +1,10 @@
+menu:
+  home: /
+  archive: /archives
+
+excerpt_link: Read More
+
+google_analytics_id: UA-35010205-2
+
+post_variables:
+  - featuredImage
