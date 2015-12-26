@@ -2,7 +2,9 @@
 title: Every program has a purpose, and we're destined to meet.
 author: aleftie
 language: English
-categories: Gridy philosophy
+categories:
+    - Gridy
+    - philosophy
 ---
 So they say.
 
