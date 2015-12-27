@@ -39,6 +39,7 @@
 
 .categories__title {
     @include rem(margin-bottom, $baseline);
+    @include rem(line-height, $baseline);
     font-size: ms(0);
 }
 
