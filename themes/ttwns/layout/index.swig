@@ -11,7 +11,7 @@
                     <div class="post__meta-content">
                         <span class="label label--yellow-light">featured</span>
                         <h1 class="post__title">
-                            <a href="{{ post.url }}">
+                            <a href="{{ post.path }}">
                             {{ post.title }}
                             </a>
                         </h1>
@@ -27,7 +27,7 @@
             <div class="grid grid--full">
                 <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <div class="posts">
-                        {% for post in page.posts %}
+                        {% for post in site.posts %}
                         {% if !post.featured %}
                         <div class="post">
                             <span class="post__date">{{ post.date | date("m.d.Y") }}</span>
