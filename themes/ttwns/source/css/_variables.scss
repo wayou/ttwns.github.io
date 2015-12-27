@@ -46,7 +46,9 @@ $pull:   true;
 $breakpoints: (
     palm: 480px,
     hands: 768px,
+    hands-lap: 1024px,
     lap: 1280px,
+    lap-desk: 1600px,
     desk: 1920px
 );
 
