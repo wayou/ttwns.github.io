@@ -1,5 +1,6 @@
 ---
 title: Why do we want to start our own business?
+excerpt: "We're sick of the days that we woke up aimlessly in the morning, got interrupted by insignificant bullshits every once in an hour...wandered around doing everything but important things, and thought hard at night about where exactly our energy went..."
 author: aleftie
 language: English
 categories: entrepreneurship

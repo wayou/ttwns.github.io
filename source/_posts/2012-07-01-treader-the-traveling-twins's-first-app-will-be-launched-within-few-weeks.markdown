@@ -1,5 +1,6 @@
 ---
 title: TReader - The Traveling Twins's first app will be launched within few weeks!!
+excerpt: "It can, it just needs time and effort. And it won't happen without us, together, trying. Publisher needs to be re-educated, so are readers. We all need to sacrifice a little to create a beautiful world."
 author: aleftie
 language: English
 categories:

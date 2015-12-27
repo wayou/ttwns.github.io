@@ -1,5 +1,6 @@
 ---
 title: Go hand in hand and make them ashamed.
+excerpt: "There are piracies, and we have to admit that sometimes we quite enjoy them. While we cannot watch our beloved American TV series at our home located in Asia, we turn to pirates or sharing societies naturally...."
 author: aleftie
 language: English
 categories: philosophy

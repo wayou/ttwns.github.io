@@ -1,5 +1,6 @@
 ---
 title: Every program has a purpose, and we're destined to meet.
+excerpt: "They say the One is destined to prevail. Human race is doomed, and I'm destined to love you. They say so not for a greater good, but for romanticism and box office, and they successfully cheated everyone..."
 author: aleftie
 language: English
 categories:

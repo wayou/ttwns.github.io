@@ -1,5 +1,6 @@
 ---
 title: Let us enjoy the ride.
+excerpt: "“Everything comes with a price.” That's a fine quote for capitalism and for life. We paid the price ourselves so please let us enjoy the ride."
 author: aleftie
 language: English
 categories:
