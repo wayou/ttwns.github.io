@@ -5,8 +5,18 @@
 .post--featured {
     position: relative;
     overflow-x: hidden;
-    min-height: $baseline * 17;
+    min-height: $baseline * 12;
+    background: url('/images/#{$featuredImage}.jpg') center center;
     background-size: cover;
+
+    @include at-least(palm) {
+        background-image: url('/images/#{$featuredImage}-medium.jpg');
+    }
+
+    @include at-least(hands) {
+        min-height: $baseline * 20;
+        background-image: url('/images/#{$featuredImage}-large.jpg');
+    }
 
     @include at-least(lap) {
         @include rem(padding-top, 3rem);
@@ -16,6 +26,7 @@
         bottom: 0;
         width: 50%;
         height: 100%;
+        background-image: url('/images/#{$featuredImage}-xlarge.jpg');
     }
 
     .post__meta {
