@@ -9,7 +9,7 @@ new_post_name: :year-:month-:day-:title.md
 post_asset_folder: true
 
 # Pagination
-per_page: 5
+per_page: 0
 
 # Extensions
 theme: ttwns
