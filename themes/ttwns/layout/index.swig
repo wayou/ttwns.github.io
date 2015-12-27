@@ -28,6 +28,7 @@
                 <div class="grid__item hands--eight-twelfths lap--one-whole">
                     <div class="posts">
                         {% for post in page.posts %}
+                        {% if !post.featured %}
                         <div class="post">
                             <span class="post__date">{{ post.date | date("m.d.Y") }}</span>
                             <h1 class="post__title">
@@ -37,6 +38,7 @@
                             </h1>
                             {{ post.excerpt }}
                         </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
 
