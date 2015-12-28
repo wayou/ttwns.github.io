@@ -29,6 +29,12 @@
                     <div class="posts">
                         {% for post in site.posts %}
                         {% if !post.featured %}
+
+                        {% if year != post.date.year() %}
+                        {% set year = post.date.year() %}
+                        <div>{{ year }}</div>
+                        {% endif %}
+
                         <div class="post">
                             <span class="post__date">{{ post.date | date("m.d.Y") }}</span>
                             <h1 class="post__title">
@@ -39,6 +45,7 @@
                             {{ post.excerpt }}
                         </div>
                         {% endif %}
+
                         {% endfor %}
                     </div>
 
