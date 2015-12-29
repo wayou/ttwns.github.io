@@ -52,7 +52,9 @@
                     <p class="home__more-articles text-centered">
                         <button type="button" class="btn--round btn--outline-green">More Articles</button>
                         <br>
-                        Or pick your interest below
+                        Or pick your interest
+                        <span class="home__more-articles__below"> below</span>
+                        <span class="home__more-articles__right"> on the right</span>
                     </p>
 
                 </div>

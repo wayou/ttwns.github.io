@@ -77,6 +77,20 @@
     }
 }
 
+.home__more-articles__below {
+    @include between(hands, lap) {
+        display: none;
+    }
+}
+
+.home__more-articles__right {
+    display: none;
+
+    @include between(hands, lap) {
+        display: inline;
+    }
+}
+
 .categories {
     @extend %clearfix;
 }
