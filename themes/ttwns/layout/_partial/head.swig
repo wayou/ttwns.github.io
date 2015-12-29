@@ -38,6 +38,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  <script src="//use.typekit.net/bdb4mgk.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <script src="https://use.typekit.net/lhl0daw.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
