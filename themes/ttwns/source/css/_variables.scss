@@ -20,6 +20,14 @@ $accent-colors: (
     'blue-dark': #4a90e2,
 );
 
+$year-colors: (
+    '2012': #dd4124,
+    '2013': #009b77,
+    '2014': #b565a7,
+    '2015': #ad655f,
+    '2016': #92a8d1, // 2016 has another color `#f7cac9`
+);
+
 $text-highlight: #fcf38e; // used on emphasis like text selection
 
 $text-color: #333;
