@@ -5,6 +5,10 @@
 
     .posts {
         @include rem(margin-top, 3rem);
+
+        > .posts__year-hint:first-child {
+            display: none;
+        }
     }
 
     .post,
