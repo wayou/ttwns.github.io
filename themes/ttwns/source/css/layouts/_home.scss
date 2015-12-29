@@ -31,6 +31,15 @@
     }
 }
 
+.posts__year-hint {
+    display: inline-block;
+    padding-left: 1rem;
+    border-top: 2px solid $gray-light;
+    margin-bottom: $baseline * 2;
+    font-family: $sans-serif;
+    font-weight: 600;
+}
+
 .home__more-articles {
     @include rem(margin-bottom, 3rem);
 

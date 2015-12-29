@@ -32,7 +32,7 @@
 
                         {% if year != post.date.year() %}
                         {% set year = post.date.year() %}
-                        <div>{{ year }}</div>
+                        <div class="posts__year-hint posts__year-hint--{{ year }}">{{ year }}</div>
                         {% endif %}
 
                         <div class="post">
