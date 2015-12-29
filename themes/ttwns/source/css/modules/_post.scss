@@ -1,5 +1,5 @@
 .post {
-    @include rem(padding, 0 0 4rem);
+    @include rem(padding-bottom, 4rem);
 }
 
 .post--featured {

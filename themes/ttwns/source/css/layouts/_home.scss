@@ -7,20 +7,24 @@
         @include rem(margin-top, 3rem);
     }
 
-    .posts,
+    .post,
     .categories {
-        @include rem(padding, 0 1rem);
+        @include rem(padding-right, 1rem);
+        @include rem(padding-left, 1rem);
 
         @include at-least(lap) {
-            @include rem(padding, 0 2rem);
+            @include rem(padding-right, 2rem);
+            @include rem(padding-left, 2rem);
         }
 
         @include at-least(lap-desk) {
-            @include rem(padding, 0 3rem);
+            @include rem(padding-right, 3rem);
+            @include rem(padding-left, 3rem);
         }
 
         @include at-least(desk) {
-            @include rem(padding, 0 4rem);
+            @include rem(padding-right, 4rem);
+            @include rem(padding-left, 4rem);
         }
     }
 
@@ -38,6 +42,20 @@
     margin-bottom: $baseline * 2;
     font-family: $sans-serif;
     font-weight: 600;
+
+    @include at-least(lap) {
+            @include rem(padding-left, 2rem);
+        }
+
+    @include at-least(lap-desk) {
+        @include rem(padding-left, 3rem);
+    }
+
+    @include at-least(desk) {
+        @include rem(padding-left, 4rem);
+    }
+}
+
 @each $year, $year-color in $year-colors {
     .posts__year-hint--#{$year} {
         color: $year-color;
